@@ -2,13 +2,14 @@
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 import Components from "unplugin-vue-components/vite";
+import tailwindTypography from '@tailwindcss/typography'
 
 export default defineNuxtConfig({
   target: 'static',
   ssr: false,
   devtools: { enabled: false },
   app: {
-   baseURL: '/nuxt-tailwind-starter/',     // update this to your repo name
+   baseURL: '/michael-synan/',     // update this to your repo name
    pageTransition: { name: 'page', mode: 'out-in' }
   },
   css: ['~/assets/css/main.css'],
@@ -16,6 +17,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     ["unplugin-icons/nuxt", { autoInstall: true }],
     '@vueuse/nuxt',
+    '@nuxt/content',
+    '@pinia/nuxt',
 ],
 postcss: {
   plugins: {
@@ -24,8 +27,11 @@ postcss: {
   },
 },
 tailwindcss: {
-  cssPath: '~/assets/css/main.css',
-  },
+  cssPath: "~/assets/css/main.css",
+  config: { 
+    plugins: [tailwindTypography],
+  }
+},
 vite: {
   plugins: [
     Components({

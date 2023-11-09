@@ -1,14 +1,42 @@
-<script lang="ts" setup>
-useHead({
-  title: 'About'
-})
-</script>
 
 <template>
-  <div class="inline">
-    <div class="mb-4">Page: about</div>
-    <Btn :to="'/'" :msg="'home'" />
-  </div>
+  <div class="flex flex-col flex-grow text-white place-content-start md:place-content-center pb-40 h-screen">
+    <div class="mx-auto w-11/12 sm:w-2/3 md:w-2/3 lg:1/2">
+      <section role="region" aria-label="About Section">
+        <div class="grid grid-cols-3 gap-4 md:gap-8 pb-0 pt-16 md:pt-8">
+          <div class="about1 relative col-span-3 pb-1/1 md:col-span-1 drop-shadow-sm">
+            <img class="rounded-sm absolute top-0 object-cover object-center w-full h-full" src="/michael_synan.jpg" alt="Profile picture of Michael Synan, front-end engineer and UI/UX designer." />
+          </div>
+          <div class="floating-box tracking-wide about2 leading-snug md:leading-normal col-span-2 align-middle sm:col-span-3 xs:col-span-3 md:col-span-2 pl-0 md:pl-4">  
+            <h2 class="text-3xl font-bold mb-2 pt-0">About Michael</h2>
+            <p class="pb-3 text-xl md:text-2xl">
+              I'm Michael, a <span class="cool-underline relative">front-end engineer</span> and <span class="relative cool-underline">UI/UX designer</span>, long-time Linux user, philosophy nerd, and open-source advocate. <br /><br />
+              My Master’s degree in Urban Affairs and Bachelor’s degree in Psychology inform my approach to understanding the human side of technology.   
+            </p>
+           <br />
+           <nuxt-link to="/projects" id="link1"
+          class="rounded-sm mb-8 z-10 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-2 px-3 md:p-2 md:px-4 text-base md:text-lg hover:bg-white hover:!text-[#131721] hover:transition-all">
+          View Portfolio 
+        </nuxt-link>
+            <SocialIconGroup />
+          </div>   
+        </div> 
+      </section>
+    </div>  
+  </div>  
 </template>
 
-<style scoped></style>
+<script setup>
+
+definePageMeta({    layout: 'default'  });
+
+const runtimeConfig = useRuntimeConfig();
+
+useHead({  title: "About",  
+meta: [    { name: 'description', content: 'I\'m into programming, jazz and chess. Check out my awesome links!' }  ], 
+  });
+
+</script>
+
+<style scoped>
+</style>

@@ -47,8 +47,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="quoteContainer">
-    <span v-for="(word, index) in words" :key="index" class="quoteWord">
+  <div class="quoteContainer z-10">
+    <span v-for="(word, index) in words" :key="index" class="quoteWord mb-3 md:mb-8 text-5xl md:text-7xl z-10">
       {{ word + '&nbsp' }}
     </span>
   </div>
@@ -58,7 +58,6 @@ onUnmounted(() => {
 <style scoped>
 .quoteWord {
   opacity: 0;
-  font-size: 60px;
   display: inline-block;
 }
 .animate-delay {
