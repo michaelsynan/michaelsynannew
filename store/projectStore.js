@@ -78,7 +78,7 @@ export const useProjectStore = defineStore("projectStore", {
         imageAria: "Codepen Designs",
         placeholder: "./design.jpg",
         description:
-          "Designed Formwork Studios from A to Z.",
+          "Some Codepen designs I've made including 3D animations.",
         tech: ["Figma"],
         link: "https://codepen.io/michaelsynan",
         external: true,
@@ -106,7 +106,7 @@ export const useProjectStore = defineStore("projectStore", {
         imageAria: "Codepen Designs",
         placeholder: "./design.jpg",
         description:
-          "Designed Formwork Studios from A to Z.",
+          "CC0 Photography website built with Nuxt 3.",
         tech: ["Figma"],
         link: "https://librephotography.com/",
         external: true,
@@ -120,7 +120,7 @@ export const useProjectStore = defineStore("projectStore", {
         imageAria: "Nuxt Tailwind Starter",
         placeholder: "/nuxt-tailwind-starter-template-thumb.webp",
         description:
-          "Starter template for Tailwind and Pinia with Nuxt 3.",
+          "Starter template for Nuxt 3 using Tailwind CSS. Includes over 20 components to help with speedy prototyping.",
         tech: ["Nuxt 3", "TailwindCSS"],
         link: "/projects/nuxt-tailwind-starter",
         featured: true,
@@ -134,7 +134,7 @@ export const useProjectStore = defineStore("projectStore", {
         imageAria: "Formwork Studios",
         placeholder: "./design.jpg",
         description:
-          "Designed Formwork Studios from A to Z.",
+          "Style-guide website mockup for Formwork Studios.",
         tech: ["Figma"],
         link: "https://dribbble.com/shots/21339965-Formwork-Studios-Style-Guide-Website-Mockup",
         external: true,
@@ -148,7 +148,7 @@ export const useProjectStore = defineStore("projectStore", {
         placeholder: "./brewfactory_place.jpg",
         imageAria: "L'art De La Rue",
         description:
-          "Brew Factory is an online coffee store I helped build from the ground up, from business plan to website.",
+          "Trendy jewelry website built with Nuxt for a street vendor in NYC. Features a horizontal infinite image scroll.",
         tech: ["Shopify"],
         link: "/projects/lart-de-la-rue",
         featured: true,

@@ -11,26 +11,29 @@ const displayedProjects = computed(() => {
   return filteredProjects.slice().reverse();  // Create a copy and reverse it
 });
 </script>
-
-
 <template>
   <div class="w-full flex flex-col justify-between">
     <div>My Projects</div>
     <!-- Grid Container -->
     <div class="grid md:grid-cols-2 grid-cols-1 gap-6 md:gap-4 w-11/12 sm:w-3/4 md:w-2/3 mx-auto mt-20 mb-32">
       <!-- Loop through each project -->
-      <nuxt-link v-for="(project, index) in displayedProjects" :key="index" :to="project.link" class="block overflow-hidden rounded">
-        <div class="relative text-white mainborder group transition-all duration-200 ease-in-out">
+      <nuxt-link v-for="(project, index) in displayedProjects" :key="index" :to="project.link" class="block overflow-hidden rounded group">
+        <div class="relative text-white transition-all duration-200 ease-in-out">
           <!-- Image with Gradient Overlay -->
           <div class="relative">
-            <img :src="project.image"
-                 class="transition-all drop-shadow brightness-[.90] group-hover:brightness-100"
-                 :alt="project.imageAria"/>
+            <img :src="project.image" class="transition-all drop-shadow brightness-100 group-hover:brightness-80" :alt="project.imageAria"/>
+            <!-- Description Overlay -->
+            <div class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ">
+              <span class="description-text bg-stone-950 tracking-wide rounded-tr rounded-br leading-normal text-lg md:text-xl text-white px-2.5 border-l-primary-dark border-l-4 py-2.5 inline-block">
+                {{ project.description }}
+              </span>
+            </div>
+            <!-- Gradient Overlay -->
             <div class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-[#171717] to-transparent"></div>
           </div>
           <!-- Project Name -->
-          <div class="mt-1 px-1 py-1 md:px-3 md:py-2 bg-neutral-900">
-            <div class="text-lg">
+          <div class="bg-neutral-900">
+            <div class="text-lg p-1 md:p-3">
               {{ project.name }}
             </div>
           </div>
@@ -40,3 +43,13 @@ const displayedProjects = computed(() => {
     <MainFooter />
   </div>
 </template>
+
+<style scoped>
+.description-text {
+  transition: transform 0.3s ease-in-out;
+}
+
+.group:hover .description-text {
+  transform: translateY(-5px);
+}
+</style>
