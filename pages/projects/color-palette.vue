@@ -11,10 +11,10 @@
                     <!-- Adjust mb-8 to the desired margin -->
                 </div>
                 <div class="max-w-4xl mx-auto mb-10">
-                    <p class="text-2xl mb-4">The Color Palette Generator uses Chroma.js to effortlessly create and export color palettes. 
+                    <p class="text-lg md:text-xl mb-4">The Color Palette Generator uses Chroma.js to effortlessly create and export color palettes. 
                         Designed for those who integrate Tailwind CSS into their projects, it offers up to eight base colors, a color scheme picker, 
                         and a range of shades. Planned features include palette saving, a component library, and gradient creation.</p>
-                        <p class="text-2xl">This project will be relaunching soon, stay tuned.</p>
+                        <p class="text-lg md:text-xl">This project will be relaunching soon, stay tuned.</p>
                 </div>
                 <div class="max-w-4xl mx-auto mb-32">
                     <nuxt-link target="_blank" to="https://colors.formworkstudios.com/" id="link1"
