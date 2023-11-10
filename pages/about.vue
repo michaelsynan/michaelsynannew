@@ -12,7 +12,7 @@
             <p class="pb-3 text-lg md:text-xl">
               I'm Michael, a <span class="cool-underline relative">front-end engineer</span> and <span class="relative cool-underline">UI/UX designer</span>, long-time Linux user, philosophy nerd, and open-source advocate.
               </p>
-              <p class="pb-6 text-lg md:text-2xl">
+              <p class="pb-6 text-lg md:text-xl">
               My Master’s degree in Urban Affairs and Bachelor’s degree in Psychology inform my approach to understanding the human side of technology.   
             </p>
           
