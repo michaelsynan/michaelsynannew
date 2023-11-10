@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: false },
   app: {
-   baseURL: '/michael-synan/',     // update this to your repo name
+  // baseURL: '/michael-synan/',  
    pageTransition: { name: 'page', mode: 'out-in' }
   },
   css: ['~/assets/css/main.css'],
