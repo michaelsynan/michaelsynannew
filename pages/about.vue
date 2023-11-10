@@ -1,6 +1,6 @@
 
 <template>
-  <div class="flex flex-col flex-grow text-white place-content-start md:place-content-center pb-40 h-screen">
+  <div class="flex flex-col flex-grow text-white place-content-start md:place-content-center pb-40 min-h-screen">
     <div class="mx-auto w-11/12 sm:w-2/3 md:w-2/3 lg:1/2">
       <section role="region" aria-label="About Section">
         <div class="grid grid-cols-3 gap-4 md:gap-8 pb-0 pt-16 md:pt-8">
