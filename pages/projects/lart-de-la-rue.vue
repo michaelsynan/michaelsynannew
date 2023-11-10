@@ -32,10 +32,9 @@
             efforts.
             The navigation menu was strategically positioned at the bottom of the screen to enhance usability for mobile
             users and to
-            facilitate quick engagement for visitors seeking to follow on Instagram or send a message. </p>
-            
+            facilitate quick engagement for visitors seeking to follow on Instagram or send a message. 
+          </p>
         </div>
-
         <!-- Design Section -->
         <div class="max-w-4xl mx-auto mb-14">
           <h2 class="text-3xl font-bold tracking-wide uppercase mb-4 border-b-2 border-stone-700">Design</h2>
@@ -66,7 +65,6 @@
             <div class="w-16 h-16 bg-[#1a1a1a]"></div>
           </div>
         </div>
-
         <div class="">
           <div class="max-w-4xl mx-auto mb-16">
             <h2 class="text-3xl font-bold tracking-wide uppercase mb-4 border-b-2 border-stone-700">Technology</h2>
@@ -83,12 +81,11 @@
         <div class="max-w-4xl mx-auto mb-32">
           <nuxt-link target="_blank" to="https://lart-formwork-studios.vercel.app/" id="link1"
             class="rounded-sm mb-8 z-10 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-2 px-3 md:p-2 md:px-4 text-base md:text-lg hover:bg-white hover:text-[#131721] hover:transition-all">
-            Visit Site <i-mdi-arrow-top-right class="inline ml-1 mb-1 text-xl" />
+            Visit Site <i-mdi-arrow-top-right class="inline ml-1 mb-1 text-xl -mr-1" />
           </nuxt-link>
         </div>
       </div>
     </div>
-
     <MainFooter />
   </div>
 </template>

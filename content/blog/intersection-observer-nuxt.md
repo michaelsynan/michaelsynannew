@@ -16,17 +16,16 @@ head:
     - name: 'description'      
       content: 'TSimple reveal on scroll approach using the Intersection Observer API.'    
 ---
-<hr class="separator" />
 
-While it's fun to add as many libraries to your project as possible (not really), sometimes it makes sense to use browser native solutions.
+# [Intersection Observer and Nuxt]{.text-3xl .mb-0 .pb-0}
+
+While adding as many libraries to your project as possible may seem like fun (it's not), often the sensible choice is to utilize native browser solutions.
 
 **Enter Web Browser APIs.**
 
-One of my favorite Web Browser APIs is Intersection Observer, which provides an interface for determining if an element is located inside the viewport. This handy API has been around since 2017 and has been proven to be extremely stable and performant for aiding in such tasks as lazy loading, animations and effects, and tracking user engagement. 
+One of my favorite Web Browser APIs is [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API), which provides an interface for determining if an element is located inside the viewport. This handy API has been around since 2017 and has been proven to be extremely stable and performant for aiding in such tasks as lazy loading, animations and effects, and tracking user engagement. 
 
 Using browser native solutions like the Intersection Observer API helps reduce load time and decreases the number of dependencies in your project. 
-
-You can read more about Intersection Observer [here](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
 
 In this tutorial I'll demonstrate how to add Intersection Observer to your Nuxt 3 project in order to trigger a reveal on scroll CSS animation. 
 

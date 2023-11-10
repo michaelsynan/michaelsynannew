@@ -30,7 +30,7 @@
             <p class="text-lg md:text-xl text-white ">
               The site is built with <a href="https://nuxtjs.org" class="underline" target="_blank"
                 rel="noopener noreferrer">Nuxt.js</a>, a powerful meta-framework of Vue.js, designed for simple, static
-              deployment and optimized for high performance. It is deployed on Vercel and styled with <a
+              deployment and optimized for high performance. It is deployed on GitHub Pages and styled with <a
                 href="https://tailwindcss.com" class="underline" target="_blank" rel="noopener noreferrer">Tailwind
                 CSS</a> for a responsive, clean design.
             </p>
@@ -39,11 +39,11 @@
         <div class="max-w-4xl mx-auto mb-32">
           <nuxt-link target="_blank" to="https://formwork-studios.github.io/nuxt-tailwind-starter/" id="link1"
             class="rounded-sm mb-8 z-10 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-2 px-3 md:p-2 md:px-4 text-base md:text-lg hover:bg-white hover:text-[#131721] hover:transition-all">
-            Visit Site <i-mdi-arrow-top-right class="inline ml-1 mb-1 text-xl" />
+            Visit Site <i-mdi-arrow-top-right class="inline ml-1 mb-1 text-xl -mr-1" />
           </nuxt-link>
           <nuxt-link target="_blank" to="https://github.com/Formwork-Studios/nuxt-tailwind-starter" id="link2"
             class="rounded-sm mb-8 z-10 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-2 px-3 md:p-2 md:px-4 text-base md:text-lg hover:bg-white hover:text-[#131721] hover:transition-all">
-            Star on GitHub <i-mdi-github class="inline ml-1 mb-1 text-xl" />
+            Star on GitHub <i-mdi-github class="inline ml-1 mb-1 text-xl -mr-1" />
           </nuxt-link>
         </div>
       </div>

@@ -1,19 +1,33 @@
 <template>
-  <main>
-    <ContentList path="/blog" v-slot="{ list }">
-      <div class="mx-auto prose !prose-stone !prose-invert prose-sm sm:prose lg:prose-lg mb-20 px-4 lg:px-12">
-        <div v-for="article in list" :key="article._path" class="text-white mb-10">
-          <NuxtLink :to="article._path">
-            <h2 class="!mb-4">{{ article.title }}</h2>
-          </NuxtLink>
-          <p class="!py-2">{{ formatDate(article.createdAt) }}</p>
-          <p>{{ article.description }}</p>
+  <div class="w-full flex flex-col justify-between text-white min-h-screen">
+    <div>
+      <div class="text-left w-11/12 md:w-2/3  mx-auto max-w-4xl text-3xl md:text-4xl font-bold mt-20 mb-10">
+        Some Blogs Posts
+      </div>
+      <div class="flex justify-center">
+        <div class="w-11/12 md:w-2/3">
+          <div class="max-w-4xl mx-auto mb-14">
+            <ContentList path="/blog" v-slot="{ list }">
+              <div class="mx-auto">
+                <div v-for="article in list" :key="article._path" class="mb-10">
+                  <NuxtLink :to="article._path">
+                    <h2 class="font-bold">{{ article.title }}</h2> <!-- Adjusted margin-bottom -->
+                  </NuxtLink>
+                  <p class="py-0 text-sm text-gray-400">{{ formatDate(article.createdAt) }}</p>
+                  <!-- Adjusted padding and added styling -->
+                  <p class="pt-4">{{ article.description }}</p> <!-- Added padding-top -->
+                </div>
+              </div>
+            </ContentList>
+
+          </div>
         </div>
       </div>
-    </ContentList>
-  </main>
+    </div>
+    <!-- Ensure the footer stretches full width and utilize mt-auto if necessary -->
+    <MainFooter class="w-full mt-auto" />
+  </div>
 </template>
-
 
 <script setup>
 import { ref } from 'vue';
@@ -27,3 +41,6 @@ const formatDate = (isoString) => {
   });
 };
 </script>
+
+
+
