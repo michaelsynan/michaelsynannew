@@ -2,6 +2,10 @@
 import { useProjectStore } from '~/store/projectStore.js';
 import { computed } from 'vue';
 
+useHead({
+  title: 'Portfolio',
+})
+
 const projectStore = useProjectStore();
 const projects = computed(() => projectStore.getAllProjects);
 
