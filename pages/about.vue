@@ -15,8 +15,9 @@
               My Master’s degree in Urban Affairs and Bachelor’s degree in Psychology inform my approach to understanding the human side of technology.   
             </p>
           
-           <nuxt-link to="/projects" id="link1"
-          class="rounded-sm mb-8 z-10 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-1.5 px-3 md:p-2 md:px-3 text-sm md:text hover:bg-white hover:!text-[#131721] hover:transition-all">
+    
+        <nuxt-link to="/projects" id="link1"
+          class="rounded-sm z-10 mb-4 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-2 px-3 md:p-2 md:px-4 text-base md:text-lg hover:bg-white hover:!text-[#131721] hover:transition-all">
           View Portfolio 
         </nuxt-link>
             <SocialIconGroup />
