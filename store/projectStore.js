@@ -136,7 +136,7 @@ export const useProjectStore = defineStore("projectStore", {
         description:
           "Style-guide website mockup for Formwork Studios.",
         tech: ["Figma"],
-        link: "https://dribbble.com/shots/21339965-Formwork-Studios-Style-Guide-Website-Mockup",
+        link: "https://www.figma.com/file/0BU0DA0Md0PSBt7GlivzHW/Formwork-Studios-Style-Guide?type=design&node-id=20%3A2&mode=design&t=163uyUgL35tnpUsS-1",
         external: true,
         responsibility: "Designer & Developer",
         display: true

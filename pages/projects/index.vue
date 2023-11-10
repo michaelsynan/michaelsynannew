@@ -23,9 +23,14 @@ const displayedProjects = computed(() => {
           <div class="relative">
             <img :src="project.image" class="transition-all drop-shadow brightness-100 group-hover:brightness-80" :alt="project.imageAria"/>
             <!-- Description Overlay -->
-            <div class="absolute bottom-0 left-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ">
-              <span class="description-text bg-stone-950 tracking-wide rounded-tr rounded-br leading-normal text-lg md:text-xl text-white px-2.5 border-l-primary-dark border-l-4 py-2.5 inline-block">
+         <!--   <div class="absolute bottom-0 left-0 p-4 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out ">
+                            <span class="description-text bg-stone-950 tracking-wide rounded-tr rounded-br leading-normal text-lg md:text-xl text-white px-2.5 border-l-primary-dark border-l-4 py-2.5 inline-block">
                 {{ project.description }}
+              </span>
+            </div> -->
+            <div class="absolute bottom-0 left-0 w-full opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out -mb-1 ">
+                            <span class=" w-full description-text bg-stone-950 tracking-wide rounded-tr rounded-br leading-normal text-lg md:text-xl text-white px-2.5 py-2.5 pb-4 inline-block px-2">
+               <div class="h-4 w-12 -mb-0.5 bg-primary-dark inline-block hidden"></div> {{ project.description }}
               </span>
             </div>
             <!-- Gradient Overlay -->
