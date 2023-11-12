@@ -1,6 +1,6 @@
 ---
 title: Reveal on Scroll with Nuxt and Intersection Observer API
-layout: post
+layout: default
 description: Simple reveal on scroll approach using the Intersection Observer API.
 tag: 
   - Intersection Observer
@@ -17,7 +17,7 @@ head:
       content: 'TSimple reveal on scroll approach using the Intersection Observer API.'    
 ---
 
-# [Intersection Observer and Nuxt]{.text-3xl .mb-0 .pb-0}
+:PublishDate
 
 While adding as many libraries to your project as possible may seem like fun (it's not), often the sensible choice is to utilize native browser solutions.
 

@@ -32,6 +32,9 @@ tailwindcss: {
     plugins: [tailwindTypography],
   }
 },
+content: {
+  documentDriven: true
+},
 vite: {
   plugins: [
     Components({

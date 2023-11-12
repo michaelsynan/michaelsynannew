@@ -2,7 +2,8 @@
   <div class="w-full flex flex-col justify-between text-white min-h-screen">
     <div>
       <div class="text-left w-11/12 md:w-2/3  mx-auto max-w-4xl text-3xl md:text-4xl font-bold mt-20 mb-10">
-        Some Blogs Posts
+        <h1>From Front to Back</h1>
+        <h2>Perspectives on Full Stack Development</h2>
       </div>
       <div class="flex justify-center">
         <div class="w-11/12 md:w-2/3">
