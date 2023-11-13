@@ -14,7 +14,7 @@ head:
     - name: 'title'      
       content: 'Reveal on Scroll with Nuxt and Intersection Observer | Michael Synan'    
     - name: 'description'      
-      content: 'TSimple reveal on scroll approach using the Intersection Observer API.'    
+      content: 'Simple reveal on scroll approach using the Intersection Observer API.'    
 ---
 
 :PublishDate
