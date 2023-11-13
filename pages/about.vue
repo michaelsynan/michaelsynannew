@@ -9,7 +9,7 @@
           </div>
           <div class="floating-box tracking-wide about2 leading-snug md:leading-normal col-span-2 align-middle sm:col-span-3 xs:col-span-3 md:col-span-2 pl-0 md:pl-4">  
             <h2 class="text-3xl font-bold mb-2 pt-0">About Michael</h2>
-            <p class="pb-3 text-lg md:text-xl pb-6">
+            <p class="pb-3 text-lg md:text-xl pb-6 text-stone-200">
               I'm Michael, a <span class="cool-underline relative">front-end engineer</span> and <span class="relative cool-underline">UI/UX designer</span>, long-time Linux user, philosophy nerd, and open-source advocate.
       
               My Master’s degree in Urban Affairs and Bachelor’s degree in Psychology inform my approach to understanding the human side of technology.   
