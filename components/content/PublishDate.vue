@@ -16,7 +16,7 @@ function formatDate(date) {
       {{ formatDate(page.createdAt) }}
     </p>
     <div class="flex mt-2">
-    <div v-for="(tag, index) in page.tag" :key="index" class="mr-2 bg-primary-dark text-sm py-0.5 px-2.5 shadow rounded-full lowercase text-stone-300">{{ tag }}</div>
+    <div v-for="(tag, index) in page.tag" :key="index" class="mr-2 bg-primary-dark text-sm py-0.5 px-2.5 shadow rounded-full lowercase text-stone-300 opacity-60">{{ tag }}</div>
     </div>
   </div>
 </template>

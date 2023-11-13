@@ -17,10 +17,12 @@ const displayedProjects = computed(() => {
 </script>
 <template>
   <div class="w-full flex flex-col justify-between">
-    <div>My Projects</div>
+
+    
     <!-- Grid Container -->
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 md:gap-4 w-11/12 sm:w-3/4 md:w-2/3 mx-auto mt-20 mb-32">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 md:gap-4 w-11/12 sm:w-3/4 md:w-2/3 mx-auto mt-20 mb-32 relative">
       <!-- Loop through each project -->
+
       <nuxt-link v-for="(project, index) in displayedProjects" :key="index" :to="project.link" class="block overflow-hidden rounded group border border-stone-800 hover:border-stone-700 transition ease-in-out duration-200 shadow">
         <div class="relative text-white transition-all duration-200 ease-in-out">
           <!-- Image with Gradient Overlay -->
@@ -48,6 +50,7 @@ const displayedProjects = computed(() => {
           </div>
         </div>
       </nuxt-link>
+      
     </div>
     <MainFooter />
   </div>
