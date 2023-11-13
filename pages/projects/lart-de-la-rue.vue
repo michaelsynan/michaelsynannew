@@ -7,19 +7,19 @@
       <div class="w-11/12 md:w-2/3">
         <div class="max-w-4xl mx-auto mb-14">
           <!-- Top Image -->
-          <img src="/lart.jpg" alt="Art Image" class="mx-auto  rounded-lg mb-4 md:mb-10"> <!-- Adjust mb-8 to the desired margin -->
+          <img src="/lart.webp" alt="Art Image" class="mx-auto  rounded-lg mb-4 md:mb-10"> <!-- Adjust mb-8 to the desired margin -->
 
           <!-- Row of Three Images -->
           <div class="flex mx-auto w-full space-x-4 md:space-x-10 ">
             <!-- Adjust mt-8 to match the bottom margin of the top image -->
             <div class="flex-1 flex items-center">
-              <img src="/lart-mobile1.jpg" alt="Art Image" class="w-full object-contain rounded-lg">
+              <img src="/lart-mobile1.webp" alt="Art Image" class="w-full object-contain rounded-lg">
             </div>
             <div class="flex-1 flex items-center">
-              <img src="/lart-mobile2.jpg" alt="Art Image" class="w-full object-contain rounded-lg">
+              <img src="/lart-mobile2.webp" alt="Art Image" class="w-full object-contain rounded-lg">
             </div>
             <div class="flex-1 flex items-center">
-              <img src="/lart-mobile3.jpg" alt="Art Image" class="w-full object-contain rounded-lg">
+              <img src="/lart-mobile3.webp" alt="Art Image" class="w-full object-contain rounded-lg">
             </div>
           </div>
         </div>
