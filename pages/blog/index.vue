@@ -6,13 +6,11 @@
       <!-- Adjusted for z-index -->
       <div class="relative" id="blogtitle" style="z-index: 2;">
         <h1 class="mb-0 pb-0">From Front to Back</h1>
-        <h2 class="text-stone-400 text-lg md:!text-xl">Perspectives on Full Stack Development</h2>
+        <h2 class="text-stone-800 text-lg md:!text-xl bg-stone-200 inline-block px-2 py-0 rounded">Perspectives on Full Stack Development</h2>
       </div>
 
       <!-- Adjusted for z-index -->
-      <div style="white-space: nowrap; z-index: 1;" class=" hidden md:inline opacity-40 border-rounded h-10 w-14 -left-24 absolute bottom-0 text-7xl -top-4 text-stone-800 shadow top-2 text-black inline-block rotate-90" id="blogheader">
-        <span style="font-size: 250px;" class="pr-0 inline font-dortmond">BLOG</span>
-      </div>
+  
     </div>
       <div class="flex justify-center">
         <div class="w-11/12 md:w-2/3">
