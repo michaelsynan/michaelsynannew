@@ -23,7 +23,7 @@
                   <NuxtLink :to="article._path">
                     <h2 class="font-bold pb-0.5 mb-0.5">{{ article.title }}</h2> <!-- Adjusted margin-bottom -->
                   </NuxtLink>
-                  <p class="py-0 text-sm text-gray-400">{{ formatDate(article.createdAt) }}</p>
+                  <p class="py-0 text-sm text-stone-400">{{ formatDate(article.createdAt) }}</p>
                   <!-- Adjusted padding and added styling -->
                   <p class="pt-4">{{ article.description }}</p> <!-- Added padding-top -->
                 </div>
