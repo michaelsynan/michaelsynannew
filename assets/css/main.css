@@ -5,7 +5,7 @@
 @layer base {
 
   h1 {
-    @apply pb-2 text-4xl;
+    @apply pb-2 text-4xl !leading-tight;
   }
 
   h2 {

@@ -12,7 +12,7 @@ function formatDate(date) {
 <template>
   <div>
     <h1 class="!mb-0">{{ page.title }}</h1>
-    <p class="m-0 !my-0 text-left text-sm md:text-lg text-zinc-500">
+    <p class="m-0 !my-0 text-left text-sm md:text-lg text-stone-500">
       {{ formatDate(page.createdAt) }}
     </p>
     <div class="flex mt-4">

@@ -57,3 +57,4 @@ To read about one method for deploying to GitHub Pages, you can check out my [gi
 
 I'll be working on a beginner's guide, developing many more icons for the Base Layer, and cleaning up the code. Stay tuned for updates and improvements to this starter template!
 
+:Back

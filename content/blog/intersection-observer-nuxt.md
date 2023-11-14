@@ -119,3 +119,5 @@ If you want to see it in action, you can check out the live demo on StackBlitz: 
 ### Conclusion 
 
 In conclusion, using browser native solutions like the Intersection Observer API can greatly benefit the performance of your project by reducing load time and dependencies. The Intersection Observer API provides a stable and efficient solution for triggering animations and effects on scroll. By implementing this API in your Nuxt 3 project, you can easily create some nice animations and increase website performance. 
+
+:Back
