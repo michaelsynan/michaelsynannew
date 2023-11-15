@@ -5,7 +5,7 @@
       
       <!-- Adjusted for z-index -->
       <div class="relative" id="blogtitle" style="z-index: 2;">
-        <h1 class="mb-0 pb-0 text-stone-100">Full Stack Musings</h1>
+        <h1 class="mb-0 pb-0 text-stone-100 tracking-wider">Full Stack Musings</h1>
       </div>
 
       <!-- Adjusted for z-index -->

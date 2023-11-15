@@ -16,9 +16,9 @@ watch(route, () => {
 
 <template>
   <div class="w-full flex flex-col items-center bg-stone-900 text-white mb-4 shadow-sm bg-opacity-50 !z-100 fixed zfix">
-    <div class="w-full px-6 flex flex-col md:flex-row justify-between text-lg">
+    <div class="w-full px-4 md:px-6 flex flex-col md:flex-row justify-between text-lg">
       <div class="flex justify-between items-center w-full md:mb-0">
-        <NuxtLink :to="'/'" class="font-medium zfix text-xl">MICHAEL SYNAN</NuxtLink>
+        <NuxtLink :to="'/'" class="font-medium zfix text-xl tracking-wider">MICHAEL SYNAN</NuxtLink>
         
         <!-- Hamburger Menu -->
         <button @click="toggleMenu" class="md:hidden zfix my-1">
@@ -29,10 +29,10 @@ watch(route, () => {
 
       <!-- Desktop Navigation Links -->
       <div class="hidden md:flex">
-        <NuxtLink to="/" activeClass="!bg-zinc-700" class="px-4 py-2.5 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">Home</NuxtLink>
-        <NuxtLink to="/about" activeClass="!bg-zinc-700" class="px-4 py-2.5 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">About</NuxtLink>
-        <NuxtLink to="/projects" activeClass="!bg-zinc-700" class="px-4 py-2.5 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">Projects</NuxtLink>
-        <NuxtLink to="/blog" activeClass="!bg-zinc-700" class="px-4 py-2.5 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">Blog</NuxtLink>
+        <NuxtLink to="/" activeClass="!bg-zinc-700" class="px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">Home</NuxtLink>
+        <NuxtLink to="/about" activeClass="!bg-zinc-700" class="px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">About</NuxtLink>
+        <NuxtLink to="/projects" activeClass="!bg-zinc-700" class="px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">Projects</NuxtLink>
+        <NuxtLink to="/blog" activeClass="!bg-zinc-700" class="px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">Blog</NuxtLink>
       </div>
 
       <!-- Mobile Navigation Links -->
