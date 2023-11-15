@@ -5,7 +5,7 @@
       
       <!-- Adjusted for z-index -->
       <div class="relative" id="blogtitle inline" style="z-index: 2;">
-        <h1 class="mb-0 pb-0 text-stone-100 tracking-wider inline">
+        <h1 class="mb-0 pb-0 text-2xl md:text-4xl font-bold  pt-0 tracking-wider">
 
 Full Stack Musings</h1>
       </div>
@@ -20,7 +20,7 @@ Full Stack Musings</h1>
               <div class="mx-auto">
                 <div v-for="article in list" :key="article._path" class="mb-10">
                   <NuxtLink :to="article._path">
-                    <h2 class="font-bold pb-0.5 mb-4 tracking-wide hover:border-b-stone-300 border-opacity-50 transition-all ease-in-out duration-100 border-transparent border inline">{{ article.title }}</h2> <!-- Adjusted margin-bottom -->
+                    <h2 class="text-xl md:text-2xl font-bold pb-0.5 mb-4 tracking-wide hover:border-b-stone-300 border-opacity-50 transition-all ease-in-out duration-100 border-transparent border inline">{{ article.title }}</h2> <!-- Adjusted margin-bottom -->
                   </NuxtLink>
                   <p class="py-0 pt-1.5 text-sm text-stone-400">{{ formatDate(article.createdAt) }}</p>
                   <!-- Adjusted padding and added styling -->

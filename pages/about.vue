@@ -10,7 +10,7 @@
           </div>
           <div
             class="floating-box tracking-wide about2 leading-snug md:leading-normal col-span-2 align-middle sm:col-span-3 xs:col-span-3 md:col-span-2 pl-0 md:pl-4">
-            <h2 class="text-3xl md:text-4xl font-bold  pt-0 tracking-wider">A Little About Me</h2>
+            <h2 class="text-2xl md:text-4xl font-bold  pt-0 tracking-wider">A Little About Me</h2>
             <p class="pb-6 text-lg md:text-xl pb-6 text-stone-200 !leading-relaxed tracking-wide">
               I'm Michael, a <span class="cool-underline relative">front-end engineer</span> and <span
                 class="relative cool-underline">UI/UX designer</span>, long-time Linux user, philosophy nerd, and
