@@ -10,8 +10,8 @@
           </div>
           <div
             class="floating-box tracking-wide about2 leading-snug md:leading-normal col-span-2 align-middle sm:col-span-3 xs:col-span-3 md:col-span-2 pl-0 md:pl-4">
-            <h2 class="text-3xl md:text-4xl font-bold  pt-0 tracking-wider">About Michael</h2>
-            <p class="pb-6 text-lg md:text-xl pb-6 text-stone-200">
+            <h2 class="text-3xl md:text-4xl font-bold  pt-0 tracking-wider">A Little About Me</h2>
+            <p class="pb-6 text-lg md:text-xl pb-6 text-stone-200 !leading-relaxed tracking-wide">
               I'm Michael, a <span class="cool-underline relative">front-end engineer</span> and <span
                 class="relative cool-underline">UI/UX designer</span>, long-time Linux user, philosophy nerd, and
               open-source advocate.
@@ -20,7 +20,7 @@
               the human side of technology.
             </p>
             <nuxt-link to="/projects" id="link1"
-              class="rounded-sm z-10 mb-10 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-2 px-3 md:p-2 md:px-4 text-base md:text-lg hover:bg-white hover:!text-[#131721] hover:transition-all">
+              class="tracking-wider rounded-sm z-10 mb-4 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-2 px-3 md:p-2 md:px-4 text-base md:text-lg hover:bg-white hover:!text-[#131721] hover:transition-all">
               View Portfolio
             </nuxt-link>
             <SocialIconGroup />

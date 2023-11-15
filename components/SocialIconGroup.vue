@@ -1,17 +1,17 @@
 <template>
-  <div class="text-stone-200 relative my-0 text-stone-200">
+  <div class="text-stone-200 relative mt-1 text-stone-200">
     <section role="region" aria-label="Social Links">
       <div class="flex items-start">
         <nuxt-link to="https://mstdn.social/@letsbecomehuman" target="_blank">
-          <i-mdi-mastodon class="inline px-1 text-stone-200 hover:text-stone-300 text-3xl" />
+          <i-mdi-mastodon class="inline mr-4 text-stone-200 hover:text-stone-300 text-2xl" />
           <span class="sr-only">Mastodon</span>
         </nuxt-link>
         <a href="https://github.com/michaelsynan" target="_blank">
-          <i-mdi-github class="inline px-1 text-stone-200 hover:text-stone-300 text-3xl" />
+          <i-mdi-github class="inline mr-4 text-stone-200 hover:text-stone-300 text-2xl" />
           <span class="sr-only">GitHub</span>
         </a>
         <a href="https://www.linkedin.com/in/hellomichaelsynan/" target="_blank">
-          <i-mdi-linkedin class="inline px-1 text-stone-200 hover:text-stone-300 text-3xl" />
+          <i-mdi-linkedin class="inline text-stone-200 hover:text-stone-300 text-2xl" />
           <span class="sr-only">LinkedIn</span>
         </a>
       </div>
