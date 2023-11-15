@@ -4,8 +4,10 @@
       <div class="text-left w-11/12 md:w-2/3 mx-auto max-w-4xl text-3xl md:text-4xl font-bold mt-20 mb-10 relative">
       
       <!-- Adjusted for z-index -->
-      <div class="relative" id="blogtitle" style="z-index: 2;">
-        <h1 class="mb-0 pb-0 text-stone-100 tracking-wider">Full Stack Musings</h1>
+      <div class="relative" id="blogtitle inline" style="z-index: 2;">
+        <h1 class="mb-0 pb-0 text-stone-100 tracking-wider inline">
+
+Full Stack Musings</h1>
       </div>
 
       <!-- Adjusted for z-index -->
@@ -22,7 +24,7 @@
                   </NuxtLink>
                   <p class="py-0 pt-1.5 text-sm text-stone-400">{{ formatDate(article.createdAt) }}</p>
                   <!-- Adjusted padding and added styling -->
-                  <p class="pt-4 tracking-wide">{{ article.description }}</p> <!-- Added padding-top -->
+                  <p class="pt-4 tracking-wider">{{ article.description }}</p> <!-- Added padding-top -->
                 </div>
               </div>
             </ContentList>
@@ -49,5 +51,14 @@ const formatDate = (isoString) => {
 };
 </script>
 
+<style scoped>
+.linux-prompt {
+  font-family: 'Courier New', monospace;
+  color: #6B7280;
+}
+
+/* Additional styling as needed */
+
+</style>
 
 
