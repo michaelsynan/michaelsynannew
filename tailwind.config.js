@@ -25,7 +25,9 @@ module.exports = {
       fontFamily: {
         sans: "Work Sans",
         display: "Wonder Unit Sans Medium",
-        dortmond: "Dortmund"
+        dortmond: "Dortmund",
+        switzer: "Switzer",
+        inter: "Inter",
       },
       spacing: {
         '1/1': '100%'
