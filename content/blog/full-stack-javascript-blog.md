@@ -44,6 +44,6 @@ In this quote, Heidegger exposes the underlying logic driving technology and cal
 
 In this quote, Heidegger is not saying that technology itself presents the danger and saving power, but, instead, our introspection of it. We can sleep walk through technology use and engage with it on tech companies terms, or do the difficult thing and elaborate our own response.
 
-[This essay is complete! Check back soon.]{.text-stone-900}
+At the end of the day, Heidegger calls on us to use technology in a purposeful and authentic manner, instead of the other way around.
 
 :Back

@@ -25,7 +25,7 @@
         </div>
         <div class="max-w-4xl mx-auto mb-14">
           <h2 class="text-3xl font-bold tracking-wide uppercase mb-4 border-b-2 border-stone-700">About This Project</h2>
-          <p class="text-lg md:text-xl text-white tracking-wide">
+          <p class="text-lg md:text-xl tracking-wide">
             L'ART DE LA RUE is a boutique Jewelry shop run by Mohammad, an immigrant whose work combines his native
             country's culture with NYC to
             create unique jewelry. He needed an affordable solution to establish his brand online and begin marketing
@@ -68,7 +68,7 @@
         <div class="">
           <div class="max-w-4xl mx-auto mb-16">
             <h2 class="text-3xl font-bold tracking-wide uppercase mb-4 border-b-2 border-stone-700">Technology</h2>
-            <p class="text-lg md:text-xl text-white ">
+            <p class="text-lg md:text-xl ">
               The site is built with <a href="https://nuxtjs.org" class="underline" target="_blank"
                 rel="noopener noreferrer">Nuxt.js</a>, a powerful meta-framework of Vue.js, designed for simple, static
               deployment and optimized for high performance. It is deployed on Vercel and styled with <a

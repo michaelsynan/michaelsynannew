@@ -4,6 +4,10 @@
 
 @layer base {
 
+  p {
+    @apply font-switzer tracking-wide text-stone-200;
+  }
+
   h1 {
     @apply pb-2 text-4xl !leading-tight;
   }
