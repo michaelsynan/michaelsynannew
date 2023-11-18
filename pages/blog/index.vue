@@ -18,13 +18,16 @@ Full Stack Musings</h1>
           <div class="max-w-4xl mx-auto mb-14">
             <ContentList path="/blog" v-slot="{ list }">
               <div class="mx-auto">
-                <div v-for="article in list" :key="article._path" class="mb-10">
+                <div v-for="article in list" :key="article._path" class="mb-8 md:mb-10 flex flex-row">
+                  <img :src="article.image" class="h-28 md:h-32 mr-4 md:mr-6 rounded" />
+                  <div>
                   <NuxtLink :to="article._path">
                     <h2 class="text-xl md:text-2xl font-bold pb-0.5 mb-4 tracking-wide hover:border-b-stone-300 border-opacity-50 transition-all ease-in-out duration-100 border-transparent border inline">{{ article.title }}</h2> <!-- Adjusted margin-bottom -->
                   </NuxtLink>
                   <p class="py-0 pt-1.5 text-sm text-stone-400">{{ formatDate(article.createdAt) }}</p>
                   <!-- Adjusted padding and added styling -->
-                  <p class="pt-4 tracking-wider">{{ article.description }}</p> <!-- Added padding-top -->
+                  <p class="hidden md:inline-block pt-4 tracking-wider font-switzer">{{ article.description }}</p> <!-- Added padding-top -->
+                  </div>
                 </div>
               </div>
             </ContentList>

@@ -6,6 +6,7 @@ tag:
   - Nuxt
   - Tailwind 
   - Pinia 
+image: nuxt3-tailwind-thumb.webp
 category: post
 status: published
 createdAt: 2023-03-23

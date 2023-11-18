@@ -6,6 +6,7 @@ tag:
   - Intersection Observer
   - Nuxt
   - Vue
+image: intersection-observer.webp
 category: post
 status: published
 createdAt: 2023-04-23
