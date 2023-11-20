@@ -1,7 +1,7 @@
 ---
 title: Full Stack Musings Launch
 layout: default
-description: I recently changed the name to my blog to something more descriptive. 
+description: As developers we should try to write code for technology that makes us better.
 tag: 
   - Philosophy
 image: full-stack.webp
