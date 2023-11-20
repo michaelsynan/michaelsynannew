@@ -42,10 +42,10 @@ watch(route, () => {
 <!-- Mobile Navigation Links -->
 <div :class="{ 'opacity-0 pointer-events-none': !menuOpen, 'opacity-100 pointer-events-auto': menuOpen }" 
   class="fixed inset-0 bg-stone-900 flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 ease-in-out pt-20 md:pt-10 text-2xl">
-  <NuxtLink to="/" activeClass="underline" class="hover:underline transition-all duration-100 text-center">Home</NuxtLink>
-  <NuxtLink to="/about" activeClass="underline" class="hover:underline transition-all duration-100 text-center">About</NuxtLink>
-  <NuxtLink to="/projects" activeClass="underline" class="hover:underline transition-all duration-100 text-center">Projects</NuxtLink>
-  <NuxtLink to="/blog" activeClass="underline" class="hover:underline transition-all duration-100 text-center">Blog</NuxtLink>
+  <NuxtLink to="/" activeClass="underline" class="hover:underline transition-all duration-100 text-center tracking-wide">Home</NuxtLink>
+  <NuxtLink to="/about" activeClass="underline" class="hover:underline transition-all duration-100 text-center tracking-wide">About</NuxtLink>
+  <NuxtLink to="/projects" activeClass="underline" class="hover:underline transition-all duration-100 text-center tracking-wide">Projects</NuxtLink>
+  <NuxtLink to="/blog" activeClass="underline" class="hover:underline transition-all duration-100 text-center tracking-wide">Blog</NuxtLink>
 </div>
 
     </div>
