@@ -14,6 +14,7 @@ watch(route, () => {
 });
 </script>
 
+
 <template>
   <div class="w-full flex flex-col items-center bg-stone-900 text-white mb-4 shadow-sm bg-opacity-50 !z-100 fixed zfix">
     <div class="w-full px-4 md:px-6 flex flex-col md:flex-row justify-between text-lg">
@@ -21,10 +22,12 @@ watch(route, () => {
         <NuxtLink :to="'/'" class="font-medium zfix text-xl tracking-wider">MICHAEL SYNAN</NuxtLink>
         
         <!-- Hamburger Menu -->
-        <button @click="toggleMenu" class="md:hidden zfix my-1">
-          <i-mdi-close v-if="menuOpen" class="w-8 h-8"></i-mdi-close>
-          <i-mdi-menu v-else class="w-8 h-8"></i-mdi-menu>
-        </button>
+        <button @click="toggleMenu" class="hamburger md:hidden zfix my-1">
+    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto']"></span>
+    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto']"></span>
+    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto']"></span>
+  </button>
+
       </div>
 
       <!-- Desktop Navigation Links -->
@@ -50,5 +53,56 @@ watch(route, () => {
 </template>
 
 <style scoped>
-.zfix {z-index: 100000 !important;}
+.zfix { z-index: 100000 !important; }
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  /* Only show on small screens */
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 10px;
+  margin-left: auto; /* Align right by default */
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+/* Adjust widths for unequal line lengths */
+.hamburger-line:nth-child(1) { width: 70%; }
+.hamburger-line:nth-child(2) { width: 100%; }
+.hamburger-line:nth-child(3) { width: 50%; }
+
+/* Transformations when menu is open */
+.transform:nth-child(1),
+.transform:nth-child(3) {
+  width: 100%; /* Equal width when menu is open */
+  transform-origin: 50%; /* Centering the rotation point */
+}
+
+.transform:nth-child(1) {
+  transform: translateY(8px) rotate(45deg); /* Adjust translateY for perfect intersection */
+}
+
+.transform:nth-child(2) {
+  opacity: 0;
+}
+
+.transform:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg); /* Adjust translateY for perfect intersection */
+}
 </style>
