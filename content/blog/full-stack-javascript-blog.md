@@ -1,7 +1,7 @@
 ---
 title: Full Stack Musings Launch
 layout: default
-description: As developers we should try to write code for technology that makes us better.
+description: Developers should try to write code for technology that makes us better.
 tag: 
   - Philosophy
 image: full-stack.webp
