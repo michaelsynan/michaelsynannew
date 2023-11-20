@@ -17,15 +17,15 @@ watch(route, () => {
 
 <template>
   <div class="w-full flex flex-col items-center bg-stone-900 text-white mb-4 shadow-sm bg-opacity-50 !z-100 fixed zfix">
-    <div class="w-full px-4 md:px-6 flex flex-col md:flex-row justify-between text-lg">
+    <div class="w-full px-2 md:px-6 flex flex-col md:flex-row justify-between text-lg">
       <div class="flex justify-between items-center w-full md:mb-0">
         <NuxtLink :to="'/'" class="font-medium zfix text-xl tracking-wider">MICHAEL SYNAN</NuxtLink>
         
         <!-- Hamburger Menu -->
         <button @click="toggleMenu" class="hamburger md:hidden zfix my-1">
-    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto']"></span>
-    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto']"></span>
-    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto']"></span>
+    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto mt-0.5']"></span>
+    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto !w-4']"></span>
+    <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto !w-3']"></span>
   </button>
 
       </div>
@@ -58,51 +58,40 @@ watch(route, () => {
 .hamburger {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
+  justify-content: space-around; /* Spread lines out evenly */
+  align-items: center;
+  width: 25px;
   height: 25px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   box-sizing: border-box;
-  /* Only show on small screens */
+  
   @media (min-width: 768px) {
     display: none;
   }
 }
 
 .hamburger-line {
-  width: 100%;
+  width: 100%; /* Full width of the button */
   height: 2px;
   background: white;
   border-radius: 10px;
-  margin-left: auto; /* Align right by default */
   transition: all 0.3s linear;
-  position: relative;
 }
-
-/* Adjust widths for unequal line lengths */
-.hamburger-line:nth-child(1) { width: 70%; }
-.hamburger-line:nth-child(2) { width: 100%; }
-.hamburger-line:nth-child(3) { width: 50%; }
 
 /* Transformations when menu is open */
-.transform:nth-child(1),
-.transform:nth-child(3) {
-  width: 100%; /* Equal width when menu is open */
-  transform-origin: 50%; /* Centering the rotation point */
-}
-
 .transform:nth-child(1) {
-  transform: translateY(8px) rotate(45deg); /* Adjust translateY for perfect intersection */
+  transform: translateY(9px) rotate(45deg);
 }
 
 .transform:nth-child(2) {
   opacity: 0;
+  transform: translateX(20px) translateY(2px); /* Move out of view */
 }
 
 .transform:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg); /* Adjust translateY for perfect intersection */
+  transform: translateY(-8px) rotate(-45deg)
 }
 </style>
