@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 useHead({
   title: 'Front-End Engineer and UI/UX Designer',
+  meta: [{ name: 'description', content: 'Building Nice Things for Human Beings.' }],
+
 })
 </script>
 
