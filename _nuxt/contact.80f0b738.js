@@ -1,0 +1,1 @@
+import{d as t,h as o,o as s,c as a,e as c,i as n,n as _}from"./entry.d1659d45.js";const i={class:"inline"},m=n("div",{class:"mb-4"},"Page: contact",-1),f=t({__name:"contact",setup(r){return o({title:"Contact"}),(d,l)=>{const e=_;return s(),a("div",i,[m,c(e,{to:"/",msg:"home"})])}}});export{f as default};
