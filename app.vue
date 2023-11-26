@@ -11,7 +11,7 @@ import '~/assets/css/main.css';
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - Michael Synan` : 'Michael Synan';
+    return titleChunk ? `Michael Synan | ${titleChunk}` : 'Michael Synan';
   }
 })
 </script>

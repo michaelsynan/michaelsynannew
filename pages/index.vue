@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: 'Home'
+  title: 'Front-End Engineer and UI/UX Designer',
 })
 </script>
 
