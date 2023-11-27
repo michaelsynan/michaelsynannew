@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 useHead({
   title: 'Front-End Engineer and UI/UX Designer',
-  meta: [{ name: 'description', content: 'Building Nice Things for Human Beings.' }],
+  meta: [{ name: 'description', content: 'Web developer and designer based in NYC, specializing in human-centric, scalable websites using Vue, Nuxt, and Tailwind CSS. Expert in creating WCAG-compliant, user-friendly digital experiences.' }],
 
 })
 </script>
