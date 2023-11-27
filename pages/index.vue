@@ -7,7 +7,7 @@ useHead({
 </script>
 
 <template>
-  <div class="flex items-center justify-center text-white mx-auto h-screen w-11/12 md:w-4xl">
+  <main class="flex items-center justify-center text-white mx-auto h-screen w-11/12 md:w-4xl">
     <div class="max-w-4xl">
       <HeroTextAnimated quote="Building Nice Things for Human Beings." class="mb-2 md:mb-4"/>
       <div class=" text-white text-lg ml-auto w-full inline-block select-none">
@@ -27,7 +27,7 @@ useHead({
     <div class="hidden absolute bottom-0">
       <a rel="me" href="https://mstdn.social/@letsbecomehuman">Mastodon Verification</a>
     </div>
-  </div>
+  </main>
 </template>
 
 <style scoped></style>

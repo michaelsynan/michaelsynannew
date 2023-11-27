@@ -1,5 +1,5 @@
 ---
-title: Full Stack Musings Launch
+title: 'Full Stack Musings Launch'
 layout: default
 description: Developers should try to write code for technology that makes us better.
 tag: 
@@ -16,7 +16,11 @@ head:
       content: 'Introducing the Nuxt Tailwind Starter Template that makes use of the nuxt.config extends key for base layer components. '    
 ---
 
-:PublishDate
+# {{ $doc.title }}
+
+<span>
+{{ $doc.createdAt }}
+</span>
 
 During my high school and undergraduate years, I spent a lot of time reading philosophy. This journey naturally led me to consider the philosophical implications of society's growing dependence on technology, especially as companies like Google started to transform into monopolies. The emergence of open-source as a counterpoint to these tech giants seemed promising. Around 2008, I discovered [Ubuntu](https://ubuntu.com/)—a popular Linux distribution even back then—and fell in love with it. Instead of following the recommended dual-boot setup, I wiped Windows off my school laptop and dove into the world of Linux. This step was more than a mere switch in operating systems; it symbolized a deeper alignment of my technological pursuits with my philosophical interests. As I grew older, I continued to engage with both technology and philosophy, concerned primarily with how to grow as a human being in a world increasingly shaped by technology. More recently, I decided to put these thoughts into writing, hence Full Stack Musings was born.
 

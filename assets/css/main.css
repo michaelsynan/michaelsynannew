@@ -174,3 +174,5 @@ body {
 }
 
 /* #heading, #heading2, .about1, .about2, #projects, .blogs, .wholething, #link1, #link2 {visibility: hidden;} */
+
+.prose h1 {margin-bottom: 0px !important;}

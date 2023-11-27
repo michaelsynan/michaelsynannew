@@ -9,8 +9,8 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: false },
   app: {
-  // baseURL: '/michael-synan/',  
-   pageTransition: { name: 'page', mode: 'out-in' }
+    // baseURL: '/michael-synan/',  
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   css: ['~/assets/css/main.css'],
   modules: [
@@ -19,29 +19,30 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
-],
-postcss: {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-},
-tailwindcss: {
-  cssPath: "~/assets/css/main.css",
-  config: { 
-    plugins: [tailwindTypography],
-  }
-},
-content: {
-  documentDriven: true
-},
-vite: {
-  plugins: [
-    Components({
-      resolvers: IconsResolver(),
-    }),
-    Icons(),
   ],
-  optimizeDeps: { exclude: ["fsevents"] },
-},
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+
+  },
+  tailwindcss: {
+    cssPath: "~/assets/css/main.css",
+    config: {
+      plugins: [tailwindTypography],
+    }
+  },
+  content: {
+    documentDriven: true
+  },
+  vite: {
+    plugins: [
+      Components({
+        resolvers: IconsResolver(),
+      }),
+      Icons(),
+    ],
+    optimizeDeps: { exclude: ["fsevents"] },
+  },
 })
