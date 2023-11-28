@@ -16,7 +16,7 @@ const formattedDate = computed(() => {
 </script>
 
 <template>
-  <div v-if="page">
-    <p class="py-0 pt-1.5 text-sm text-stone-400">{{ formattedDate }}</p>
+  <div v-if="page && formattedDate">
+    <p class="!m-0 !p-0 text-sm text-stone-400">{{ formattedDate }}</p>
   </div>
 </template>
