@@ -18,6 +18,10 @@ head:
       content: 'Introducing the Nuxt Tailwind Starter Template that makes use of the nuxt.config extends key for base layer components. '    
 ---
 
+# {{ $doc.title }}
+
+:TheDate 
+
 Over the past year, I've found myself going through the same steps repeatedly to achieve my ideal Nuxt setup. This involved installing and configuring TailwindCSS, creating layouts, installing an icon framework, and creating base components. To make life easier, I decided to create a starter template using best practices and some of the latest Nuxt 3 features, such as adding layers via the extends key in `nuxt.config`. Today, I'm excited to announce the release of this starter template and base layer.
 
 If you're new to Nuxt, feel free to check out the write-up below. Otherwise, you can go straight to the repos here:

@@ -18,6 +18,10 @@ head:
       content: 'Simple reveal on scroll approach using the Intersection Observer API.'    
 ---
 
+# {{ $doc.title }}
+
+:TheDate 
+
 While adding as many libraries to your project as possible may seem like fun (it's not), often the sensible choice is to utilize native browser solutions.
 
 **Enter Web Browser APIs.**
