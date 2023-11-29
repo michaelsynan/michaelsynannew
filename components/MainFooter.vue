@@ -7,7 +7,7 @@
             class="inline-block align-text-top text-stone-400 group-hover:text-stone-200 text-base" target="_blank">Send me a message <i-mdi-arrow-top-right-thick class="inline text-stone-400 group-hover:text-stone-200 text-base" />
           </a>
         </div>
-        <div><SocialIconGroup class="pt-0"/></div>
+        <div><SocialIconGroup small class="pt-0"/></div>
       </div>
     </div>
   </footer>
