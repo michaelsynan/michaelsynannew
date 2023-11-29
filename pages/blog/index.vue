@@ -5,7 +5,7 @@
 
         <!-- Adjusted for z-index -->
         <div class="relative" id="blogtitle inline" style="z-index: 2;">
-          <h1 class="mb-0 pb-0 text-2xl md:text-4xl font-bold  pt-0 tracking-wider">
+          <h1 class="mb-0 pb-0 text-4xl sm:text-5xl md:text-6xl font-bold  pt-0 tracking-wider">
 
             Full Stack Musings</h1>
         </div>
@@ -19,7 +19,7 @@
             <ContentList path="/blog" v-slot="{ list }">
               <div class="mx-auto">
                 <div v-for="article in list" :key="article._path" class="mb-8 md:mb-10 flex flex-row">
-                  <img :src="article.image" class="h-28 md:h-32 mr-4 md:mr-6 rounded" />
+                  <img :src="article.image" class="h-28 md:h-32 mr-4 md:mr-6 rounded-sm" />
                   <div>
                     <NuxtLink :to="article._path">
                       <h2
@@ -28,7 +28,7 @@
                     </NuxtLink>
                     <p class="py-0 pt-1.5 text-sm text-stone-400">{{ formatDate(article.createdAt) }}</p>
                     <!-- Adjusted padding and added styling -->
-                    <p class="hidden md:inline-block pt-4 tracking-wider font-switzer">{{ article.description }}</p>
+                    <p class="hidden md:inline-block pt-4 tracking-wider font-switzer leading-relaxed">{{ article.description }}</p>
                     <!-- Added padding-top -->
                   </div>
                 </div>
