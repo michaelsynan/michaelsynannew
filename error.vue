@@ -1,18 +1,30 @@
-<script setup>
-const error = useError();
-</script>
-
 <template>
     <NuxtLayout name="404">
-        <div>
-            <div v-if="error.statusCode === 404">
-                <h1 class="text-6xl">404</h1>
+      <div class="errorSection flex justify-center items-center flex-col h-screen">
+        <h1 class="text-6xl">404</h1>
                 <h2>
                     <strong>{{ error.message }}</strong>
                 </h2>
                 <p class="mb-4">It looks like you found a glitch in the matrix...</p>
                 <Btn msg="home" :icon="false" to="/" />
-            </div>
-        </div>
+      </div>
     </NuxtLayout>
-</template>
+  </template>
+  
+  <script setup>
+  import { useRouter } from 'vue-router';
+  
+  definePageMeta({
+    layout: "404",
+  });
+  
+  const router = useRouter();
+  
+  const goHome = () => {
+    router.push('/');
+  };
+  
+  </script>
+  
+  <style scoped></style>
+  

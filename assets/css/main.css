@@ -40,9 +40,12 @@
   .prose p a,
   .links a,
   .alink {
-    @apply underline decoration-1 underline-offset-4 transition
+    @apply underline decoration-2 underline-offset-4 transition duration-200 ease-in-out decoration-primary
   }
 
+  .prose p {
+    @apply leading-loose
+  }
   p a:hover, .links a:hover, .alink {
     @apply underline decoration-2 underline-offset-4
   }
@@ -88,6 +91,7 @@
     height: 2px;
     margin: 1em 0 0.5em;
   }
+
 
 }
 
@@ -178,3 +182,4 @@ body {
 .prose h1 {margin-bottom: 0px !important;}
 
 .turtles {font-size: 200px;}
+
