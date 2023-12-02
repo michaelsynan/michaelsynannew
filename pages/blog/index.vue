@@ -59,7 +59,6 @@ const formatDate = (isoString) => {
   color: #6B7280;
 }
 
-/* Additional styling as needed */
 </style>
 
 

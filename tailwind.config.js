@@ -47,12 +47,6 @@ module.exports = {
           DEFAULT: '#00a878',
           light: '#33b993'
         },
-        'deepsea-blue': {
-          DEFAULT: '#19535f',
-          light: '#47757f'
-        },
-        'veryred': '#DC2626',
-        'dutch-white': '#D7C9AA',
         darkpurple: {
           dark: '#30011E',
           DEFAULT: '#451a35',

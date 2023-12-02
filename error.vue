@@ -19,11 +19,6 @@
   });
   
   const router = useRouter();
-  
-  const goHome = () => {
-    router.push('/');
-  };
-  
   </script>
   
   <style scoped></style>
