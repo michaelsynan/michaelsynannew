@@ -97,6 +97,7 @@
   font-family: "Work Sans";
   src: url("/assets/fonts/WorkSans-Regular.ttf");
   font-weight: 400;
+  font-display: swap; 
 }
 
 
@@ -104,30 +105,35 @@
   font-family: "Switzer";
   src: url("/assets/fonts/Switzer-Regular.woff2");
   font-weight: 400;
+  font-display: swap; 
 }
 
 @font-face {
   font-family: "Inter";
   src: url("/assets/fonts/Inter-Regular.ttf");
   font-weight: 400;
+  font-display: swap; 
 }
 
 @font-face {
   font-family: "Work Sans";
   src: url("/assets/fonts/WorkSans-SemiBold.ttf");
   font-weight: 600;
+  font-display: swap; 
 }
 
 @font-face {
   font-family: "Work Sans";
   src: url("/assets/fonts/WorkSans-Bold.ttf");
   font-weight: 700;
+  font-display: swap; 
 }
 
 
 @font-face {
   font-family: "Wonder Unit Sans Medium";
-  src: url("/assets/fonts/WonderUnitSans-Medium.woff2")
+  src: url("/assets/fonts/WonderUnitSans-Medium.woff2");
+  font-display: swap; 
 }
 
 @font-face {
@@ -135,6 +141,7 @@
   src: url('/assets/fonts/Dortmund-ExtraBold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
+  font-display: swap; 
 }
 
 .lart-serif {
