@@ -8,8 +8,7 @@ export default defineNuxtConfig({
   target: 'static',
   ssr: false,
   devtools: { enabled: false },
-  app: {
-    // baseURL: '/michael-synan/',  
+  app: { 
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   css: ['~/assets/css/main.css'],
@@ -35,14 +34,6 @@ export default defineNuxtConfig({
   },
   content: {
     documentDriven: true
-  },
-  hooks: {
-    'content:file:beforeInsert': (document) => {
-      if (document.createdAt) {
-        const date = new Date(document.createdAt);
-        document.createdAt = date.toISOString().split('T')[0]; // Format: YYYY-MM-DD
-      }
-    },
   },
   vite: {
     plugins: [
