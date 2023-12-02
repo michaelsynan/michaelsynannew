@@ -100,7 +100,6 @@
   font-display: swap; 
 }
 
-
 @font-face {
   font-family: "Switzer";
   src: url("/assets/fonts/Switzer-Regular.woff2");
@@ -128,7 +127,6 @@
   font-weight: 700;
   font-display: swap; 
 }
-
 
 @font-face {
   font-family: "Wonder Unit Sans Medium";
@@ -164,6 +162,7 @@ nav a {
   --tw-gradient-stops: #1f2937, #2d3748;
   --color-darkpurple: #451a35;
 }
+
 body {
   min-height: 100vh;
   overflow-y: auto;
@@ -171,13 +170,7 @@ body {
   background-color: var(--color-darkpurple);
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-body {
   background-color: transparent;
 }
 
 .prose h1 {margin-bottom: 0px !important;}
-
-.turtles {font-size: 200px;}
-
