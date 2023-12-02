@@ -61,7 +61,6 @@
 
 @layer utilities {
   .bg-gradient {
-   /* @apply bg-[radial-gradient(ellipse_at_bottom_left, _var(--tw-gradient-stops))] from-slate-900 via-neutral-900 to-darkpurple */
   }
 
   .prose h1 a, .prose h2 a, .prose h3 a {
@@ -92,9 +91,7 @@
     margin: 1em 0 0.5em;
   }
 
-
 }
-
 
 @font-face {
   font-family: "Work Sans";
@@ -150,12 +147,10 @@ nav a {
 
 ::selection {
   background: #451a35;
-  /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
   background: #451a35;
-  /* Gecko Browsers */
 }
 
 :root {
@@ -171,13 +166,9 @@ body {
   background-repeat: no-repeat;
 }
 
-
-
 body {
   background-color: transparent;
 }
-
-/* #heading, #heading2, .about1, .about2, #projects, .blogs, .wholething, #link1, #link2 {visibility: hidden;} */
 
 .prose h1 {margin-bottom: 0px !important;}
 

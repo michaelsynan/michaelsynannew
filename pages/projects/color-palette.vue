@@ -6,9 +6,7 @@
         <div class="flex justify-center">
             <div class="w-11/12 md:w-2/3">
                 <div class="max-w-4xl mx-auto mb-14">
-                    <!-- Top Image -->
                     <img src="/colorpalette_collage.png" alt="Art Image" class="mx-auto  rounded-lg mb-4 md:mb-10">
-                    <!-- Adjust mb-8 to the desired margin -->
                 </div>
                 <div class="max-w-4xl mx-auto mb-10">
                     <p class="text-lg md:text-xl mb-4">The Color Palette Generator uses Chroma.js to effortlessly create and export color palettes. 

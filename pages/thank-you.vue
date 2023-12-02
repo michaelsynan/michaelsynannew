@@ -18,7 +18,3 @@ useHead({
     </div>
   </div>
 </template>
-
-<style scoped>
-/* You can add your CSS styles here, similar to your index page */
-</style>
