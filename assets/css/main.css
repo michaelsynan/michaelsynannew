@@ -95,39 +95,39 @@
 
 @font-face {
   font-family: "Work Sans";
-  src: url("./assets/fonts/WorkSans-Regular.ttf");
+  src: url("/assets/fonts/WorkSans-Regular.ttf");
   font-weight: 400;
 }
 
 
 @font-face {
   font-family: "Switzer";
-  src: url("./assets/fonts/Switzer-Regular.woff2");
+  src: url("/assets/fonts/Switzer-Regular.woff2");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("./assets/fonts/Inter-Regular.ttf");
+  src: url("/assets/fonts/Inter-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Work Sans";
-  src: url("./assets/fonts/WorkSans-SemiBold.ttf");
+  src: url("/assets/fonts/WorkSans-SemiBold.ttf");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Work Sans";
-  src: url("./assets/fonts/WorkSans-Bold.ttf");
+  src: url("/assets/fonts/WorkSans-Bold.ttf");
   font-weight: 700;
 }
 
 
 @font-face {
   font-family: "Wonder Unit Sans Medium";
-  src: url("./assets/fonts/WonderUnitSans-Medium.woff2")
+  src: url("/assets/fonts/WonderUnitSans-Medium.woff2")
 }
 
 @font-face {

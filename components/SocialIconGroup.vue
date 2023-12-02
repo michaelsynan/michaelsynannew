@@ -10,7 +10,7 @@
         <span class="sr-only">GitHub</span>
       </nuxt-link>
       <nuxt-link to="https://www.linkedin.com/in/hellomichaelsynan/" target="_blank" title="LinkedIn">
-        <i-mdi-linkedin :class="iconSizeClass" />
+        <i-mdi-linkedin :class="iconSizeClass" class="!mr-0"/>
         <span class="sr-only">LinkedIn</span>
       </nuxt-link>
     </div>

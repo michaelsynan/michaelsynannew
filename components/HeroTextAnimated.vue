@@ -41,7 +41,7 @@ onUnmounted(() => {
 
 <template>
   <div class="quoteContainer z-10">
-    <span v-for="(word, index) in words" :key="index" class="quoteWord mb-3 md:mb-8 text-4xl md:text-7xl z-10">
+    <span v-for="(word, index) in words" :key="index" class="quoteWord mb-3 md:mb-8 text-4xl md:text-7xl z-10 !font-sans">
       {{ word + '&nbsp' }}
     </span>
   </div>
