@@ -36,7 +36,6 @@ import { ref } from 'vue';
 
 definePageMeta({ layout: 'default' });
 
-const runtimeConfig = useRuntimeConfig();
 const isImageLoaded = ref(false);
 
 useHead({
