@@ -144,7 +144,7 @@ export const useProjectStore = defineStore("projectStore", {
       {
         id: 10,
         name: "L'art De La Rue",
-        image: "/lart.jpg",
+        image: "/lart.webp",
         placeholder: "./brewfactory_place.jpg",
         imageAria: "L'art De La Rue",
         description:

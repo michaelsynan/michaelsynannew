@@ -24,9 +24,9 @@ const displayedProjects = computed(() => {
           <div class="relative">
             <img :src="project.image" class="transition-all drop-shadow !brightness-10 bg-stone-900 hover:opacity-80 group-hover:brightness-80" :alt="project.imageAria"/>
    
-            <div class="absolute bottom-0 left-0 w-full opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out -mb-1 ">
-                            <span class=" w-full description-text bg-stone-950 tracking-wide rounded-tr rounded-br leading-normal text-lg md:text-xl text-white px-2.5 py-3 pb-4 inline-block px-2">
-               <div class="h-4 w-12 -mb-0.5 bg-primary-dark inline-block hidden font-switzer"></div> {{ project.description }}
+            <div class="absolute bottom-0 left-0 w-full opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out -mb-1 font-switzer">
+                            <span class=" w-full description-text bg-stone-950 tracking-wide leading-normal text-lg md:text-xl text-white px-2.5 py-3 pb-4 inline-block px-2">
+               {{ project.description }}
               </span>
             </div>
          

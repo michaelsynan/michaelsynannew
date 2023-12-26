@@ -28,13 +28,13 @@
     @apply font-switzer tracking-wide;
   }
 
-  .btn {
+  /* .btn {
     @apply inline px-4 py-2 mt-2 no-underline uppercase bg-darkpurple drop-shadow-sm;
   }
 
   .btn:hover {
     @apply bg-darkpurple-light;
-  }
+  } */
 
   p a,
   .prose p a,
