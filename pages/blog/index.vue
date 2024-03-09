@@ -2,7 +2,7 @@
   <div class="w-full flex flex-col justify-between text-white min-h-screen">
     <div class="text-left w-11/12 md:w-2/3 mx-auto max-w-4xl text-3xl md:text-4xl font-bold mt-20 mb-10 relative">
       <div class="relative" id="blogtitle inline" style="z-index: 2;">
-        <h1 class="mb-0 pb-0 text-3xl sm:text-5xl md:text-6xl font-bold  pt-0 tracking-wider">
+        <h1 class="mb-0 pb-0 text-3xl sm:text-5xl md:text-6xl font-bold  pt-0 tracking-wider uppercase">
           Full Stack Musings
         </h1>
       </div>

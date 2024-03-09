@@ -40,10 +40,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="quoteContainer z-10">
+  <div class="quoteContainer z-10"><h1>
     <span v-for="(word, index) in words" :key="index" class="quoteWord mb-3 md:mb-8 text-4xl md:text-7xl z-10 !font-sans">
       {{ word + '&nbsp' }}
     </span>
+    </h1>
   </div>
 </template>
 

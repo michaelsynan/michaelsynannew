@@ -1,0 +1,1 @@
+import{d as t,h as s,o,c as a,e as c,i as n,s as _}from"./entry.StwSPU2c.js";const i={class:"inline"},m=n("div",{class:"mb-4"},"Page: contact",-1),f=t({__name:"contact",setup(r){return s({title:"Contact"}),(d,l)=>{const e=_;return o(),a("div",i,[m,c(e,{to:"/",msg:"home"})])}}});export{f as default};
