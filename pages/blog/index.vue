@@ -12,8 +12,11 @@
         <div class="max-w-4xl mx-auto mb-14">
           <ContentList path="/blog" v-slot="{ list }">
             <div class="mx-auto">
-              <div v-for="article in list" :key="article._path" class="mb-8 md:mb-10 flex flex-row">
-                <img :src="article.image" class="h-28 md:h-32 mr-4 md:mr-6 rounded-sm" />
+              <div 
+        v-for="article in sortedArticles(list)" 
+        :key="article._path" 
+        class="mb-8 md:mb-10 flex flex-row"
+      >                <img :src="article.image" class="h-28 md:h-32 mr-4 md:mr-6 rounded-sm" />
                 <div>
                   <NuxtLink :to="article._path">
                     <h2
@@ -36,6 +39,15 @@
 </template>
 
 <script setup>
+
+function sortedArticles(list) {
+  return [...list].sort((a, b) => {
+    // For descending order, swap b and a in the comparison
+    return new Date(b.createdAt) - new Date(a.createdAt);
+  });
+}
+
+
 useHead({
   title: 'Full Stack Musings Blog',
   meta: [
