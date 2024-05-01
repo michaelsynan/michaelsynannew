@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   target: 'static',
   ssr: false,
   devtools: { enabled: false },
+  runtimeConfig: {
+    openaiApiKey: process.env.OPENAI_API_KEY
+  },
   app: { 
     pageTransition: { name: 'page', mode: 'out-in' }
   },
