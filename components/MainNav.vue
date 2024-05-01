@@ -31,6 +31,9 @@ watch(route, () => {
         <NuxtLink to="/" activeClass="!bg-zinc-700"
           class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">
           Home</NuxtLink>
+          <NuxtLink to="/personal-ai-site" activeClass="!bg-zinc-700"
+          class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">
+          AI</NuxtLink>
         <NuxtLink to="/about" prefetch activeClass="!bg-zinc-700"
           class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">
           About</NuxtLink>
@@ -45,6 +48,8 @@ watch(route, () => {
         class="fixed inset-0 bg-stone-900 flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 ease-in-out pt-20 md:pt-10 text-2xl">
         <NuxtLink to="/" activeClass="underline"
           class="hover:underline transition-all duration-100 text-center tracking-wide">Home</NuxtLink>
+          <NuxtLink to="/personal-ai-site" activeClass="underline"
+          class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>AI</NuxtLink>
         <NuxtLink to="/about" activeClass="underline"
           class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>About</NuxtLink>
         <NuxtLink to="/projects" activeClass="underline"

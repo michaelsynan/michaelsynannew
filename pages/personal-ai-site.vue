@@ -14,7 +14,7 @@
   </div>
       </div>
     </div>
-    <div class="w-full px-4 pb-10 md:w-2/3 lg:w-1/2 mx-auto relative">
+    <div class="w-full px-4 pb-4 md:pb-10 md:w-2/3 lg:w-1/2 mx-auto relative">
       <div id="myMessageBox" class="text-stone-600 absolute bottom-full mb-2 left-0 w-full">
         <div v-if="yourMsg" class="bg-opacity-10 p-4 rounded-lg">You: {{ yourMsg }}</div>
       </div>
