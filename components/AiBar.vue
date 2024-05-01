@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isVisible" class="fixed bottom-0 w-full flex justify-between items-center bg-stone-200 cursor-pointer">
+  <div v-if="isVisible" class="fixed bottom-0 w-full flex justify-between items-center bg-stone-200 cursor-pointer hover:opacity-80 transition-all">
     <nuxt-link prefetch to="/personal-ai-site" id="learn-more"
       class="flex-grow flex justify-between items-center hover:opacity-80">
       <div class="text-center text-stone-900 py-3 px-4">
