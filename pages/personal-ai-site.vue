@@ -4,7 +4,7 @@
       <div class="w-full md:w-2/3 lg:w-1/2 mx-auto p-4">
         <transition name="fade-in" mode="out-in">
           <div v-if="thinking" class="text-left text-xl tracking-wide w-full">Thinking{{dots}}</div>
-          <div v-else key="message" class="text-left text-xl tracking-wide w-full">{{ msg }}</div>
+          <div v-else key="message" class="text-left text-base md:text-xl tracking-wide w-full leading-9">{{ msg }}</div>
         </transition>
         <!-- Conditionally render the email div below the message -->
         <div v-if="includesEmail" class="mt-6 ">
@@ -12,6 +12,11 @@
       {{ email }}
     </a>
   </div>
+  <div v-if="includesLinkedin" class="mt-6">
+          <a :href="linkedin" class="p-2 bg-gradient-to-br from-teal-800 to-teal-600 border-1 cursor-pointer border-opacity-20 border-teal-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
+            Visit my LinkedIn
+          </a>
+        </div>
       </div>
     </div>
     <div class="w-full px-4 pb-4 md:pb-10 md:w-2/3 lg:w-1/2 mx-auto relative">
@@ -37,6 +42,9 @@ const inputMessage = ref("");
 const thinking = ref(false);
 const dots = ref('');
 const email = "hello@michaelsynan.com"; // Your email as a constant
+const linkedin = "https://www.linkedin.com/in/michael-synan"; // Replace with your actual LinkedIn profile link
+const includesLinkedin = computed(() => msg.value.includes(linkedin));
+
 
 // Computed property to detect if the message includes the email
 const includesEmail = computed(() => msg.value.includes(email));

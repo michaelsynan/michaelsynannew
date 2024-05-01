@@ -16,10 +16,10 @@ watch(route, () => {
 
 
 <template>
-  <nav class="w-full flex flex-col items-center bg-stone-900 text-white mb-4 shadow-sm bg-opacity-50 !z-100 fixed zfix" aria-label="Main navigation">
+  <nav class="w-full flex flex-col items-center bg-stone-900 text-white mb-4 shadow-sm bg-opacity-50 !z-100 fixed zfix p-2 md:p-0" aria-label="Main navigation">
     <div class="w-full px-2 md:px-6 flex flex-col md:flex-row justify-between text-lg">
       <div class="flex justify-between items-center w-full md:mb-0">
-        <NuxtLink :to="'/'" class="font-medium zfix text-xl tracking-wider">MICHAEL SYNAN</NuxtLink>
+        <NuxtLink :to="'/'" class="font-medium zfix text-xl tracking-wider ml-4 md:m1-0">MICHAEL SYNAN</NuxtLink>
         <button @click="toggleMenu" class="hamburger md:hidden zfix my-1" aria-label="Open menu">
           <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto mt-0.5']"></span>
           <span :class="['hamburger-line', menuOpen ? 'transform' : 'ml-auto !w-4']"></span>
