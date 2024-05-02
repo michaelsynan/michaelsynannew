@@ -109,16 +109,6 @@ const sendYourMsg = async () => {
   inputMessage.value = "";
 };
 
-// // Initial message change after a few seconds only once on component mount
-// onMounted(() => {
-//   setTimeout(() => {
-//     if (isInitialMessage.value) {
-//       msg.value = initialMsg.value;
-//       setTimeout(() => isInitialMessage.value = false, 5000);  // Automatically transition from the initial message
-//     }
-//   }, 2500);
-// });
-
 useHead({
   title: "About",
   meta: [{ name: 'description', content: 'I’m into programming, jazz, and chess. Check out my awesome links!' }],

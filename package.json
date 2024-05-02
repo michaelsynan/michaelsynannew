@@ -16,7 +16,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/core": "^10.5.0",
     "@vueuse/nuxt": "^10.5.0",
-    "nuxt": "^3.8.2",
+    "nuxt": "^3.11.2",
     "unplugin-icons": "^0.17.1",
     "unplugin-vue-components": "^0.25.2",
     "vue": "^3.3.4",
@@ -26,8 +26,5 @@
     "@nuxt/content": "^2.9.0",
     "@pinia/nuxt": "^0.5.1",
     "pinia": "^2.1.7"
-  },
-  "overrides": {
-    "vue": "latest"
   }
 }
