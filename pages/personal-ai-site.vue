@@ -16,15 +16,14 @@
     {{ msg }}
   </div>
 </transition>
-
         <!-- Conditionally render the email div below the message -->
-        <div v-if="includesEmail" class="mt-6 ">
+  <div v-if="includesEmail" class="mt-6 ">
     <a :href="`mailto:${email}`" class="p-2 bg-gradient-to-br from-teal-800 to-teal-600 border-1 cursor-pointer border-opacity-20 border-teal-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
       {{ email }}
     </a>
   </div>
   <div v-if="includesLinkedin" class="mt-6">
-          <a :href="linkedin" class="p-2 bg-gradient-to-br from-teal-800 to-teal-600 border-1 cursor-pointer border-opacity-20 border-teal-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
+          <a :href="linkedin" class="p-2 bg-gradient-to-br from-cyan-800 to-cyan-600 border-1 cursor-pointer border-opacity-20 border-cyan-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
             Visit my LinkedIn
           </a>
         </div>
