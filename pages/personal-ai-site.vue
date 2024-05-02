@@ -28,6 +28,11 @@
             Visit my LinkedIn
           </a>
         </div>
+        <div v-if="includesCalendly" class="mt-6">
+        <a :href="calendlyLink" class="p-2 bg-gradient-to-br from-purple-800 to-purple-600 border-1 cursor-pointer border-opacity-20 border-purple-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
+          Schedule a Call
+        </a>
+      </div>
       </div>
     </div>
     <div class="w-full px-4 pb-4 md:pb-10 md:w-2/3 lg:w-1/2 mx-auto relative">
@@ -47,16 +52,19 @@ import { ref, onMounted, computed } from 'vue';
 definePageMeta({ layout: 'default' });
 
 const msg = ref("Let's start your project today.");
-const initialMsg = ref("Welcome! How can I assist you today?");  // New initial message
-const isInitialMessage = ref(true);  // Track whether the initial message is displayed
+const initialMsg = ref("Welcome! How can I assist you today?");  
+const isInitialMessage = ref(true);  
 const yourMsg = ref("");
 const inputMessage = ref("");
 const thinking = ref(false);
 const dots = ref('');
-const email = "hello@michaelsynan.com"; // Your email as a constant
-const linkedin = "https://www.linkedin.com/in/hellomichaelsynan/"; // Replace with your actual LinkedIn profile link
+const email = "hello@michaelsynan.com"; 
+const linkedin = "https://www.linkedin.com/in/hellomichaelsynan/"; 
 const includesLinkedin = computed(() => msg.value.includes(linkedin));
 const includesEmail = computed(() => msg.value.includes(email));
+const calendlyLink = "https://calendly.com/michaelsynan";  
+const includesCalendly = computed(() => msg.value.toLowerCase().includes('calendly') || msg.value.toLowerCase().includes('schedule'));
+
 
 // Function to update "Thinking..." dots smoothly
 function updateDots() {
