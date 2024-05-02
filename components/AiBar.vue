@@ -2,7 +2,7 @@
   <div v-if="isVisible" class="fixed bottom-0 w-full flex justify-between items-center cursor-pointer hover:opacity-80 transition-all shadow-lg bg-gradient-to-r from-stone-100 via-stone-300 to-stone-200 hover:from-stone-50 hover:via-stone-100 hover:to-stone-50">
     <nuxt-link prefetch to="/personal-ai-site" id="learn-more"
       class="flex-grow flex justify-between items-center hover:opacity-80">
-      <div class="text-center text-stone-900 py-3 px-2 md:px-6">
+      <div class="text-center text-stone-900 py-3 px-4 md:px-6">
         <!-- Centered AI Stuff Link -->
         <span class="hidden md:inline-block text-teal-700 text-lg">Check Out the New AI Version</span>
         <!-- Visible on small screens, hidden on medium screens and up -->

@@ -3,9 +3,20 @@
     <div class="flex-grow w-full flex items-center justify-center">
       <div class="w-full md:w-2/3 lg:w-1/2 mx-auto p-4">
         <transition name="fade-in" mode="out-in">
-          <div v-if="thinking" class="text-left text-xl tracking-wide w-full">Thinking{{dots}}</div>
-          <div v-else key="message" class="text-left text-base md:text-xl tracking-wide w-full leading-9">{{ msg }}</div>
-        </transition>
+  <!-- Display when thinking -->
+  <div v-if="thinking" class="text-left text-xl tracking-wide w-full">Thinking{{dots}}</div>
+  
+  <!-- Display as the initial message -->
+  <div v-else-if="isInitialMessage" key="initialMessage" class="text-left text-xl tracking-wide w-full">
+    {{ initialMsg }}
+  </div>
+
+  <!-- Default message display -->
+  <div v-else key="message" class="text-left text-base md:text-xl tracking-wide w-full leading-9">
+    {{ msg }}
+  </div>
+</transition>
+
         <!-- Conditionally render the email div below the message -->
         <div v-if="includesEmail" class="mt-6 ">
     <a :href="`mailto:${email}`" class="p-2 bg-gradient-to-br from-teal-800 to-teal-600 border-1 cursor-pointer border-opacity-20 border-teal-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
@@ -30,23 +41,21 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 
 definePageMeta({ layout: 'default' });
 
 const msg = ref("Let's start your project today.");
+const initialMsg = ref("Welcome! How can I assist you today?");  // New initial message
+const isInitialMessage = ref(true);  // Track whether the initial message is displayed
 const yourMsg = ref("");
 const inputMessage = ref("");
 const thinking = ref(false);
 const dots = ref('');
 const email = "hello@michaelsynan.com"; // Your email as a constant
-const linkedin = "https://www.linkedin.com/in/michael-synan"; // Replace with your actual LinkedIn profile link
+const linkedin = "https://www.linkedin.com/in/hellomichaelsynan/"; // Replace with your actual LinkedIn profile link
 const includesLinkedin = computed(() => msg.value.includes(linkedin));
-
-
-// Computed property to detect if the message includes the email
 const includesEmail = computed(() => msg.value.includes(email));
 
 // Function to update "Thinking..." dots smoothly
@@ -61,9 +70,12 @@ function updateDots() {
 
 // Function to send message to the server and handle the response
 const sendYourMsg = async () => {
-  yourMsg.value = inputMessage.value;  // Capture the user's input
-  thinking.value = true;  // Show the thinking text
-  const dotInterval = updateDots();  // Start updating dots
+  if (isInitialMessage.value) {
+    isInitialMessage.value = false;  // Toggle the initial message state off after the first interaction
+  }
+  yourMsg.value = inputMessage.value;
+  thinking.value = true;
+  const dotInterval = updateDots();
 
   const response = await fetch('/api/openai', {
     method: 'POST',
@@ -72,23 +84,24 @@ const sendYourMsg = async () => {
     },
     body: JSON.stringify({
       prompt: yourMsg.value,
-      sessionId: sessionStorage.getItem('openaiSessionId')  // Pass the session ID if available
+      sessionId: sessionStorage.getItem('openaiSessionId')
     })
   });
 
-  clearInterval(dotInterval);  // Stop updating dots
-  thinking.value = false;  // Hide the thinking text
+  clearInterval(dotInterval);
+  thinking.value = false;
   const { text, sessionId } = await response.json();
-  msg.value = text;  // Update the message displayed to the user
-  sessionStorage.setItem('openaiSessionId', sessionId);  // Save the new session ID
-  inputMessage.value = "";  // Clear the input field
+  msg.value = text;
+  sessionStorage.setItem('openaiSessionId', sessionId);
+  inputMessage.value = "";
 };
 
 // Initial message change after a few seconds only once on component mount
 onMounted(() => {
   setTimeout(() => {
-    if (msg.value === "Let's start your project today.") {
-      msg.value = "How can I help you?";
+    if (isInitialMessage.value) {
+      msg.value = initialMsg.value;
+      setTimeout(() => isInitialMessage.value = false, 5000);  // Automatically transition from the initial message
     }
   }, 2500);
 });
@@ -98,7 +111,6 @@ useHead({
   meta: [{ name: 'description', content: 'I’m into programming, jazz, and chess. Check out my awesome links!' }],
 });
 </script>
-
 
 
 
