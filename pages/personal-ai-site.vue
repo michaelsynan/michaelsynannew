@@ -13,7 +13,8 @@
 
   <!-- Default message display -->
   <div v-else key="message" class="text-left text-base md:text-xl tracking-wide w-full leading-10">
-    {{ msg }}
+   <!-- <div> {{ msg }}</div> -->
+   <div v-html="$md.render(model)"></div>
   </div>
 </transition>
         <!-- Conditionally render the email div below the message -->
@@ -69,6 +70,8 @@ const includesLinkedin = computed(() => msg.value.includes(linkedin));
 const includesEmail = computed(() => msg.value.includes(email));
 const calendlyLink = "https://calendly.com/michaelsynan";  
 const includesCalendly = computed(() => msg.value.toLowerCase().includes('calendly') || msg.value.toLowerCase().includes('schedule'));
+
+const model = computed(() => msg.value);
 
 
 // Function to update "Thinking..." dots smoothly

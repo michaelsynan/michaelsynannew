@@ -21,7 +21,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
+    '@nuxt-alt/markdown-it'
   ],
+  markdownit: {
+    runtime: true
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
