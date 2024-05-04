@@ -16,23 +16,7 @@
           </template>
         </div>
         </transition>
-        <div class="flex gap-4 flex-row">
-          <div v-if="includesEmail" class="mt-6 ">
-            <a :href="`mailto:${email}`" target="__blank"  class="p-2 bg-gradient-to-br from-teal-800 to-teal-600 border-1 cursor-pointer border-opacity-20 border-teal-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
-              {{ email }}
-            </a>
-          </div>
-          <div v-if="includesLinkedin" class="mt-6">
-                  <a :href="linkedin" target="__blank" class="p-2 px-3 bg-gradient-to-br from-cyan-800 to-cyan-600 border-1 cursor-pointer border-opacity-20 border-cyan-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
-                    LinkedIn
-                  </a>
-                </div>
-                <div v-if="includesCalendly" class="mt-6">
-                <a :href="calendlyLink" target="__blank"  class="p-2 px-3 bg-gradient-to-br from-purple-800 to-purple-600 border-1 cursor-pointer border-opacity-20 border-purple-300 text-stone-200 max-w-max rounded-full text-xs shadow-inner">
-                  Schedule a Call
-                </a>
-              </div>
-              </div>
+
               </div>
             </div>
         <div class="w-full px-4 pb-4 md:pb-10 md:w-2/3 lg:w-2/5 mx-auto relative">
@@ -81,12 +65,7 @@ const yourMsg = ref("");
 const inputMessage = ref("");
 const thinking = ref(false);
 const dots = ref('');
-const email = "hello@michaelsynan.com"; 
-const linkedin = "https://www.linkedin.com/in/hellomichaelsynan/"; 
-const includesLinkedin = computed(() => msg.value.includes(linkedin));
-const includesEmail = computed(() => msg.value.includes(email));
-const calendlyLink = "https://calendly.com/michaelsynan";  
-const includesCalendly = computed(() => msg.value.toLowerCase().includes('calendly') || msg.value.toLowerCase().includes('schedule'));
+
 
 const model = computed(() => msg.value);
 
@@ -128,7 +107,7 @@ const sendYourMsg = async () => {
 };
 
 useHead({
-  title: "Personal AI Assistant",
+  title: "Personal AI Assistant & Agent",
   meta: [{ name: 'description', content: "Artificial Intelligence and AI Agents are here to stay. In this demo you can explore Michael's AI assistant to learn about him and the technology" }],
 });
 </script>
