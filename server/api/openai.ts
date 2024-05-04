@@ -12,6 +12,10 @@ const personalContext = `
   My calendly is https://calendly.com/michaelsynan and my email is hello@michaelsynan.com. My LinkedIn is https://www.linkedin.com/in/hellomichaelsynan/.
 
   Michael is prepared to do his thing. To make it shine.
+
+  portfolio is located at [/projects](/projects)
+  blog is at [/blog](/blog)
+  about is at [/about](/about) 
 `;
 
 const initialPrompt = "Please provide a brief description of your needs.";
