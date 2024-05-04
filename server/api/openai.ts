@@ -36,6 +36,8 @@ export default defineEventHandler(async (event) => {
 
     You will communicate graduate level ideas but in a language regular people can understand.
 
+    When you say a closing sentence that is encouraging, consider occasionally putting it on a new line (50 50 chance of not going on new line)
+
     Context about Michael Synan:
     ${personalContext}
 
