@@ -3,8 +3,8 @@
     <div class="flex-grow w-full flex items-center justify-center">
       <div class="w-full md:w-2/3 lg:w-2/5 mx-auto p-4">
         <transition name="fade-in" mode="out-in">
-          <div key="message" class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal bg-stone-900 p-4 rounded-lg shadow-md mb-24 md:mb-10 mt-20 md:mt-10">          
-            <span class="block text-xl pb-2 font-semibold text-stone-500 tracking-wide">Assistant</span>
+          <div key="message" class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal border-stone-800 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow-md mb-24 md:mb-10 mt-20 md:mt-10">          
+            <span class="block text-xl pb-2 font-semibold text-stone-500 tracking-wide ">Assistant</span>
           <template v-if="thinking">
             Thinking{{dots}}
           </template>
@@ -12,7 +12,7 @@
             {{ initialMsg }}
           </template>
           <template v-else>
-            <div v-html="$md.render(model)"></div>
+            <div v-html="$md.render(model)" ></div>
           </template>
         </div>
         </transition>
@@ -23,7 +23,7 @@
         <div id="myMessageBox" class="text-stone-600 absolute bottom-full mb-2 left-0 w-full">
           <div v-if="yourMsg" class="bg-opacity-10 p-3 rounded-lg">You: {{ yourMsg }}</div>
         </div>
-         <div class="input-wrapper flex items-center py-2 px-2 bg-opacity-10 bg-gray-800 rounded-lg border border-opacity-20 border-stone-600">
+         <div class="input-wrapper flex items-center py-2 px-2 bg-opacity-10 bg-gray-800 rounded-lg border border-opacity-20 border-stone-400">
         <input v-model="inputMessage" @keyup.enter="sendYourMsg"
               class="w-full bg-transparent placeholder-stone-500 text-stone-100 border-none px-2"
               placeholder="Type your message..." />

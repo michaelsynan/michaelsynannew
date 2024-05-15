@@ -29,7 +29,7 @@ useHead({
           <a href="https://airtable.com/shrTD2l45wB1qa6Pb" class="!font-inter tracking-widest group inline-block mt-6 md:mt-0 text-base md:text-base"
             id="lets-talk" target="_blank">Let's Talk
             <span
-              class="group-hover:pl-2 group-hover:transition-all text-bluegreen">&#8594;</span>
+              class="group-hover:pl-2 group-hover:transition-all text-teal-400">&#8594;</span>
           </a>
         </div>
       </div>
