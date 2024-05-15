@@ -60,7 +60,7 @@ export default defineEventHandler(async (event) => {
         "Authorization": `Bearer ${config.openaiApiKey}`
       },
       body: JSON.stringify({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           { role: "system", content: fullPrompt },
           { role: "user", content: body.prompt }
