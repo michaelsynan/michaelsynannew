@@ -2,31 +2,30 @@
   <div class="flex flex-col justify-center items-center text-stone-100 min-h-screen">
     <div class="flex-grow w-full flex items-center justify-center">
       <div class="w-full md:w-2/3 lg:w-2/5 mx-auto p-4">
-        <transition name="fade-in" mode="out-in">
-          <div key="message" class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal border-stone-800 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow-md mb-24 md:mb-10 mt-20 md:mt-10">          
-            <span class="block text-xl pb-2 font-semibold text-stone-500 tracking-wide ">Assistant</span>
-          <template v-if="thinking">
-            Thinking{{dots}}
-          </template>
-          <template v-else-if="isInitialMessage">
-            {{ initialMsg }}
-          </template>
-          <template v-else>
-            <div v-html="$md.render(model)" ></div>
-          </template>
-        </div>
-        </transition>
-
-              </div>
+        <div class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal border-stone-800 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow-md mb-24 md:mb-10 mt-20 md:mt-10">
+          <span class="block text-xl pb-2 font-semibold text-stone-500 tracking-wide">Assistant</span>
+          <transition name="fade-in" mode="out-in">
+            <div :key="msgKey">
+              <template v-if="thinking">
+                Thinking{{dots}}
+              </template>
+              <template v-else-if="isInitialMessage">
+                {{ initialMsg }}
+              </template>
+              <template v-else>
+                <div v-html="$md.render(model)"></div>
+              </template>
             </div>
-        <div class="w-full px-4 pb-4 md:pb-10 md:w-2/3 lg:w-2/5 mx-auto relative">
-        <div id="myMessageBox" class="text-stone-600 absolute bottom-full mb-2 left-0 w-full">
-          <div v-if="yourMsg" class="bg-opacity-10 p-3 rounded-lg">You: {{ yourMsg }}</div>
+          </transition>
         </div>
-         <div class="input-wrapper flex items-center py-2 px-2 bg-opacity-10 bg-gray-800 rounded-lg border border-opacity-20 border-stone-400">
-        <input v-model="inputMessage" @keyup.enter="sendYourMsg"
-              class="w-full bg-transparent placeholder-stone-500 text-stone-100 border-none px-2"
-              placeholder="Type your message..." />
+      </div>
+    </div>
+    <div class="w-full px-4 pb-4 md:pb-10 md:w-2/3 lg:w-2/5 mx-auto relative">
+      <div id="myMessageBox" class="text-stone-600 absolute bottom-full mb-2 left-0 w-full">
+        <div v-if="yourMsg" class="bg-opacity-10 p-3 rounded-lg">You: {{ yourMsg }}</div>
+      </div>
+      <div class="input-wrapper flex items-center py-2 px-2 bg-opacity-10 bg-gray-800 rounded-lg border border-opacity-20 border-stone-400">
+        <input v-model="inputMessage" @keyup.enter="sendYourMsg" class="w-full bg-transparent placeholder-stone-500 text-stone-100 border-none px-2" placeholder="Type your message..." />
         <button @click="sendYourMsg" class="ml-2 bg-teal-500 hover:bg-teal-400 text-stone-100 font-bold py-1.5 px-3 rounded">
           Send
         </button>
@@ -65,7 +64,7 @@ const yourMsg = ref("");
 const inputMessage = ref("");
 const thinking = ref(false);
 const dots = ref('');
-
+const msgKey = ref(0);
 
 const model = computed(() => msg.value);
 
@@ -85,6 +84,7 @@ const sendYourMsg = async () => {
   yourMsg.value = inputMessage.value;
   inputMessage.value = '';
   thinking.value = true;
+  msgKey.value++; // Update the key to trigger the transition for "Thinking..."
   const dotInterval = updateDots();
 
   const response = await fetch('/api/openai', {
@@ -100,6 +100,9 @@ const sendYourMsg = async () => {
 
   clearInterval(dotInterval);
   thinking.value = false;
+  msg.value = ''; // Clear the message content to avoid brief flash of old message
+  msgKey.value++; // Update the key to trigger the transition for new message
+
   const { text, sessionId } = await response.json();
   msg.value = text;
   sessionStorage.setItem('openaiSessionId', sessionId);
