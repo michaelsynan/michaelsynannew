@@ -3,7 +3,8 @@
     <div class="flex-grow w-full flex items-center justify-center">
       <div class="w-full md:w-2/3 lg:w-2/5 mx-auto p-4">
         <transition name="fade-in" mode="out-in">
-          <div key="message" class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal bg-gradient-to-b from-stone-900 to-stone-800 p-4 rounded-lg shadow-lg mb-24 md:mb-10 mt-20 md:mt-10">          <span class="block text-2xl pb-2 font-semibold text-stone-500 tracking-wide">Assistant</span>
+          <div key="message" class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal bg-stone-900 p-4 rounded-lg shadow-md mb-24 md:mb-10 mt-20 md:mt-10">          
+            <span class="block text-xl pb-2 font-semibold text-stone-500 tracking-wide">Assistant</span>
           <template v-if="thinking">
             Thinking{{dots}}
           </template>
