@@ -4,9 +4,9 @@
       class="flex-grow flex justify-between items-centerf">
       <div class="text-center text-stone-900 py-3 px-4 md:px-6">
         <!-- Centered AI Stuff Link -->
-        <span class="hidden md:inline-block text-teal-400 text-lg">✨ Check out my AI demo page</span>
+        <span class="hidden md:inline-block text-teal-400 text-lg">✨ <span class="pl-1">Check out my AI demo page</span></span>
         <!-- Visible on small screens, hidden on medium screens and up -->
-        <span class="inline-block md:hidden text-teal-400">✨ View AI demo page</span>
+        <span class="inline-block md:hidden text-teal-400">✨ <span class="pl-1">View AI demo page</span></span>
       </div>
     </nuxt-link>
     <!-- X Button positioned to the right outside of nuxt-link -->
