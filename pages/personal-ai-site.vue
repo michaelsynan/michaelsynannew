@@ -2,13 +2,8 @@
   <div class="flex flex-col justify-center items-center text-stone-100 min-h-screen">
     <div class="flex-grow w-full flex items-center justify-center relative">
       <div class="w-full md:w-2/3 lg:w-2/5 mx-auto p-4">
-        <div class="absolute top-0 left-0 md:relative cursor-pointer pt-[60px] md:pt-0 pl-4 md:pl-0">
-          <select v-model="selectedDemo" @change="onDemoChange" class="bg-stone-900 border border-stone-800 border-opacity-50 shadow text-stone-100 p-2 rounded ">
-            <option value="regular">Regular Chat</option>
-            <option value="embeddings">Embeddings Chat</option>
-          </select>
-        </div>
-        <div class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal border-stone-800 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow mb-24 md:mb-10 mt-20 md:mt-10">
+     
+        <div class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal border-stone-800 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow mt-4 mb-4">
           <span class="block text-xl pb-3 font-semibold text-stone-500 tracking-wide flex justify-between items-center">
   Assistant
   <span class="cursor-pointer">
@@ -36,6 +31,12 @@
               </template>
             </div>
           </transition>
+        </div>
+        <div class="cursor-pointer ">
+          <select v-model="selectedDemo" @change="onDemoChange" class="bg-stone-900 border border-stone-800 border-opacity-50 shadow text-stone-100 p-2 rounded ">
+            <option value="regular">Regular Chat</option>
+            <option value="embeddings">Embeddings Chat</option>
+          </select>
         </div>
       </div>
     </div>
