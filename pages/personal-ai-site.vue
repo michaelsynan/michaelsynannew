@@ -124,6 +124,30 @@ const dots = ref('');
 const msgKey = ref(0);
 const selectedDemo = ref('context');
 
+/* embeddings stuff */
+
+
+const embeddings = ref([]);
+
+onMounted(() => {
+  const { data, error } = useFetch('/quotes_embeddings.json', {
+    method: 'GET',
+    responseType: 'json'
+  });
+
+  // Watch for data changes and update the embeddings ref
+  watchEffect(() => {
+    if (data.value) {
+      embeddings.value = data.value;
+      console.log('Embeddings loaded:', embeddings.value);
+    }
+    if (error.value) {
+      console.error('Error loading embeddings:', error.value);
+    }
+  });
+});
+/* end embeddings stuff */
+
 const model = computed(() => msg.value);
 
 function updateDots() {
