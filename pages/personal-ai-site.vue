@@ -5,17 +5,18 @@
     <!-- Main Content -->
     <div class="flex-grow w-full flex items-center justify-center relative z-10">
       <div class="w-full md:w-2/3 lg:w-2/5 mx-auto p-4">
-        <div v-if="open" class="">
-      <div class="w-full p-4 rounded-lg shadow mt-4 mb-4 bg-stone-700 rounded-lg shadow  border-stone-800 border-opacity-50 border">
-        <div class="text-xlxl flex flex-col items-center relative">
-          <!-- Close Button -->
-         
-          <div class="p-2 !text-left leading-relaxed w-full">{{ modelDescription }}</div>
-        </div>
+        <transition name="fade-in">
+  <div ref="modalRef" v-if="open" class="modal-content">
+    <div class="w-full p-4 rounded-lg shadow mt-4 mb-4 bg-stone-700 rounded-lg shadow border-stone-600 border-opacity-50 border">
+      <div class="text-xlxl flex flex-col items-center relative">
+        <div class="p-2 !text-left leading-relaxed w-full">{{ modelDescription }}</div>
       </div>
     </div>
+  </div>
+</transition>
 
-        <div class="text-left text-xl md:text-2xl tracking-wide w-full leading-normal border-stone-800 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow mt-4 mb-4">
+
+        <div class="text-left text-xl md:text-2xl tracking-wide w-full leading-normal border-stone-600 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow mt-4 mb-4">
           <span class="block text-xl pb-3 font-semibold text-stone-500 tracking-wide flex justify-between items-center">
             AI Assistant
             <span @click="open = true" class="cursor-pointer">
@@ -42,7 +43,7 @@
           </transition>
         </div>
         <div class="cursor-pointer">
-          <select v-model="selectedDemo" @change="onDemoChange" class="bg-stone-900 border border-stone-800 border-opacity-50 shadow text-stone-100 p-2 rounded">
+          <select v-model="selectedDemo" @change="onDemoChange" class="bg-stone-900 border border-stone-600 border-opacity-50 shadow text-stone-100 p-2 rounded">
             <option value="context">Contextual Chat</option>
             <option value="embeddings">Embeddings Chat</option>
           </select>
@@ -66,19 +67,35 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 
 definePageMeta({ layout: 'default' });
 const open = ref(false);  
-const selectedModel = ref('regular');  
+const selectedModel = ref('context');  
 const descriptions = ref({
-  context: "This is the context chat description, tailored for regular interactions.",
-  embeddings: "This is the embeddings chat description, focused on embedding functionalities."
+  context: "This is the contextual chat description, tailored for interactions requiring explicit context.",
+  embeddings: "This is the embedding-based chat description, focused on utilizing embeddings to understand and respond to inputs."
 });
+
 
 const modelDescription = computed(() => {
   return descriptions.value[selectedModel.value];
 });
+
+const modalRef = ref(null);
+const handleClickOutside = event => {
+  if (modalRef.value && !modalRef.value.contains(event.target)) {
+    open.value = false;
+  }
+};
+onMounted(() => {
+  document.addEventListener('mousedown', handleClickOutside);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('mousedown', handleClickOutside);
+});
+
 
 const msg = ref("Let's start your project today.");
 const initialMessages = [
