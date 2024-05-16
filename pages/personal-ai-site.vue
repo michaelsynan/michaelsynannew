@@ -1,45 +1,56 @@
 <template>
   <div class="flex flex-col justify-center items-center text-stone-100 min-h-screen">
-    <div class="flex-grow w-full flex items-center justify-center relative">
-      <div class="w-full md:w-2/3 lg:w-2/5 mx-auto p-4">
-     
-        <div class="text-left text-xl md:text-2xl tracking-wide w-full !leading-normal border-stone-800 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow mt-4 mb-4">
-          <span class="block text-xl pb-3 font-semibold text-stone-500 tracking-wide flex justify-between items-center">
-  Assistant
-  <span class="cursor-pointer">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M11 17h2v-6h-2zm1-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"/>
-    </svg>
-  </span>
-</span>
+    <!-- Overlay and Modal -->
 
-          <transition name="fade-in" mode="out-in">
+    <!-- Main Content -->
+    <div class="flex-grow w-full flex items-center justify-center relative z-10">
+      <div class="w-full md:w-2/3 lg:w-2/5 mx-auto p-4">
+        <div v-if="open" class="">
+      <div class="w-full p-4 rounded-lg shadow mt-4 mb-4 bg-stone-700 rounded-lg shadow  border-stone-800 border-opacity-50 border">
+        <div class="text-xlxl flex flex-col items-center relative">
+          <!-- Close Button -->
+         
+          <div class="p-2 !text-left leading-relaxed w-full">{{ modelDescription }}</div>
+        </div>
+      </div>
+    </div>
+
+        <div class="text-left text-xl md:text-2xl tracking-wide w-full leading-normal border-stone-800 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow mt-4 mb-4">
+          <span class="block text-xl pb-3 font-semibold text-stone-500 tracking-wide flex justify-between items-center">
+            AI Assistant
+            <span @click="open = true" class="cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </span>
+          </span>
+          <transition name="fade-in" mode="out-in" class="prose text-stone-200">
             <div :key="msgKey">
-              <template v-if="thinking">
-                Thinking{{dots}}
-              </template>
-              <template v-else-if="isInitialMessage">
-                {{ initialMsg }}
-              </template>
+              <template v-if="thinking">Thinking{{ dots }}</template>
+              <template v-else-if="isInitialMessage">{{ initialMsg }}</template>
               <template v-else>
                 <template v-if="selectedDemo === 'embeddings'">
                   <div>Chat with embeddings coming soon...</div>
                 </template>
                 <template v-else>
-                  <div v-html="$md.render(model)" class="leading-relaxed"></div>
+                  <div v-html="$md.render(model)" class="leading-relaxed prose"></div>
                 </template>
               </template>
             </div>
           </transition>
         </div>
-        <div class="cursor-pointer ">
-          <select v-model="selectedDemo" @change="onDemoChange" class="bg-stone-900 border border-stone-800 border-opacity-50 shadow text-stone-100 p-2 rounded ">
-            <option value="regular">Regular Chat</option>
+        <div class="cursor-pointer">
+          <select v-model="selectedDemo" @change="onDemoChange" class="bg-stone-900 border border-stone-800 border-opacity-50 shadow text-stone-100 p-2 rounded">
+            <option value="context">Contextual Chat</option>
             <option value="embeddings">Embeddings Chat</option>
           </select>
         </div>
       </div>
     </div>
+    
+    <!-- Additional Content -->
     <div class="w-full px-4 pb-4 md:pb-10 md:w-2/3 lg:w-2/5 mx-auto relative">
       <div id="myMessageBox" class="text-stone-600 absolute bottom-full mb-2 left-0 w-full">
         <div v-if="yourMsg" class="bg-opacity-10 p-3 rounded-lg">You: {{ yourMsg }}</div>
@@ -58,6 +69,16 @@
 import { ref, onMounted, computed } from 'vue';
 
 definePageMeta({ layout: 'default' });
+const open = ref(false);  
+const selectedModel = ref('regular');  
+const descriptions = ref({
+  context: "This is the context chat description, tailored for regular interactions.",
+  embeddings: "This is the embeddings chat description, focused on embedding functionalities."
+});
+
+const modelDescription = computed(() => {
+  return descriptions.value[selectedModel.value];
+});
 
 const msg = ref("Let's start your project today.");
 const initialMessages = [
@@ -84,7 +105,7 @@ const inputMessage = ref("");
 const thinking = ref(false);
 const dots = ref('');
 const msgKey = ref(0);
-const selectedDemo = ref('regular');
+const selectedDemo = ref('context');
 
 const model = computed(() => msg.value);
 
