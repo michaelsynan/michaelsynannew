@@ -1,7 +1,7 @@
 <template>
   <div v-if="isVisible" class="fixed bottom-0 w-full flex justify-between items-center cursor-pointer transition-all shadow-lg bg-stone-950">
     <nuxt-link prefetch to="/personal-ai-site" id="learn-more"
-      class="flex-grow flex justify-between items-center hover:opacity-80">
+      class="flex-grow flex justify-between items-centerf">
       <div class="text-center text-stone-900 py-3 px-4 md:px-6">
         <!-- Centered AI Stuff Link -->
         <span class="hidden md:inline-block text-teal-400 text-lg">✨ Check out my AI demo page</span>
