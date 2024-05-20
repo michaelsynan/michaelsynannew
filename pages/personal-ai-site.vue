@@ -19,13 +19,19 @@
         <div class="text-left text-xl md:text-2xl tracking-wide w-full leading-normal border-stone-600 border-opacity-50 border bg-stone-900 p-4 rounded-lg shadow mt-4 mb-4">
           <span class="block text-xl pb-3 font-semibold text-stone-500 tracking-wide flex justify-between items-center">
             AI Assistant
-            <span @click="open = true" class="cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="16" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-              </svg>
-            </span>
+    
+         
+  <span 
+    @click="open = !open" 
+    class="cursor-pointer transition-colors duration-100" 
+    :class="{ 'text-teal-600': open }">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="16" x2="12" y2="12"></line>
+      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+    </svg>
+  </span>
+
           </span>
           <transition name="fade-in" mode="out-in" class="prose text-stone-200">
             <div :key="msgKey">
@@ -43,7 +49,7 @@
           </transition>
         </div>
         <div class="cursor-pointer">
-          <select v-model="selectedDemo" @change="onDemoChange" class="bg-stone-900 border border-stone-600 border-opacity-50 shadow text-stone-100 p-2 rounded">
+          <select v-model="selectedDemo" @change="onDemoChange" class="bg-stone-900 border border-stone-600 border-opacity-50 shadow text-stone-100 p-2 rounded text-sm">
             <option value="context">Contextual Chat</option>
             <option value="embeddings">Embeddings Chat</option>
           </select>
