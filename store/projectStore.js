@@ -155,6 +155,22 @@ export const useProjectStore = defineStore("projectStore", {
         responsibility: "Project Manager & Developer",
         display: true
       },
+
+      {
+        id: 10,
+        name: "Artificial Intelligence",
+        image: "/lart.webp",
+        placeholder: "./brewfactory_place.jpg",
+        imageAria: "L'art De La Rue",
+        description:
+          "Trendy jewelry website built with Nuxt for a street vendor in NYC. Features a horizontal infinite image scroll.",
+        tech: ["Shopify"],
+        link: "/projects/artificial-intelligence",
+        featured: true,
+        responsibility: "Project Manager & Developer",
+        display: true
+      },
+      
       
 
     ],

@@ -164,7 +164,6 @@ function updateDots() {
     dots.value = '.'.repeat(dotCount);
   }, 500);
 }
-
 const sendYourMsg = async () => {
   if (isInitialMessage.value) {
     isInitialMessage.value = false;  
@@ -175,7 +174,10 @@ const sendYourMsg = async () => {
   msgKey.value++; // Update the key to trigger the transition for "Thinking..."
   const dotInterval = updateDots();
 
-  const response = await fetch('/api/openai', {
+  // Determine the API endpoint based on the selected demo
+  const apiEndpoint = selectedDemo.value === 'embeddings' ? '/api/openai_embeddings' : '/api/openai';
+
+  const response = await fetch(apiEndpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -227,4 +229,6 @@ useHead({
 .input-wrapper input:focus {
   outline: none; 
 }
+
+.prose a {color: #76448a !important;}
 </style>
