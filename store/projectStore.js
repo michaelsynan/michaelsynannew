@@ -159,11 +159,11 @@ export const useProjectStore = defineStore("projectStore", {
       {
         id: 10,
         name: "Artificial Intelligence",
-        image: "/lart.webp",
-        placeholder: "./brewfactory_place.jpg",
+        image: "/ai-chat-bot.webp",
+        placeholder: "./ai-chat-bot.webp",
         imageAria: "L'art De La Rue",
         description:
-          "Trendy jewelry website built with Nuxt for a street vendor in NYC. Features a horizontal infinite image scroll.",
+          "Chatbot built with Nuxt for personal website using OpenAI API and contextual prompts.",
         tech: ["Shopify"],
         link: "/projects/artificial-intelligence",
         featured: true,
