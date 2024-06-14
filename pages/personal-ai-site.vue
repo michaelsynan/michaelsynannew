@@ -7,9 +7,9 @@
       <div class="w-full md:w-2/3 lg:w-2/5 mx-auto p-4">
         <transition name="fade-in">
   <div ref="modalRef" v-if="open" class="modal-content">
-    <div class="w-full p-4 rounded-lg shadow mt-4 mb-4 bg-stone-700 rounded-lg shadow border-stone-600 border-opacity-50 border">
+    <div class="w-full p-4 rounded-lg shadow mt-4 mb-4 bg-stone-700 border-stone-500 border-opacity-50 border">
       <div class="text-xlxl flex flex-col items-center relative">
-        <div class="p-2 !text-left leading-relaxed w-full">{{ modelDescription }}</div>
+        <div class="p-2 !text-left leading-relaxed w-full text-stone-200">{{ modelDescription }}</div>
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
          
   <span 
     @click="open = !open" 
-    class="cursor-pointer transition-colors duration-100" 
+    class="cursor-pointer transition-colors duration-100 hover:text-teal-700" 
     :class="{ 'text-teal-600': open }">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
       <circle cx="12" cy="12" r="10"></circle>
