@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-col justify-between text-white">
-    <div class="text-center text-5xl md:text-7xl font-bold mt-20 mb-10 ">
+    <div class="text-left md:text-center text-5xl md:text-7xl font-bold mt-20 mb-10 w-11/12 md:w-2/3">
      Artificial Intelligence
     </div>
     <div class="flex justify-center">

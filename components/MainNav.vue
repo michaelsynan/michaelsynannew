@@ -47,7 +47,7 @@ watch(route, () => {
           class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800" prefetch>Contact</NuxtLink>
       </div>
       <div :class="{ 'opacity-0 pointer-events-none': !menuOpen, 'opacity-100 pointer-events-auto': menuOpen }"
-        class="fixed inset-0 bg-stone-900 flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 ease-in-out pt-20 md:pt-10 text-2xl">
+        class="fixed inset-0 bg-stone-900 flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 ease-in-out pt-20 md:pt-10 text-2xl h-screen">
         <NuxtLink to="/" activeClass="underline"
           class="hover:underline transition-all duration-100 text-center tracking-wide">Home</NuxtLink>
           <NuxtLink to="/personal-ai-site" activeClass="underline"

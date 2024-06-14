@@ -32,13 +32,13 @@
   .prose p a,
   .links a,
   .alink {
-    @apply underline decoration-2 underline-offset-4 transition duration-200 ease-in-out decoration-primary
+    @apply underline decoration-1 underline-offset-4 transition duration-200 ease-in-out decoration-primary
   }
 
   .prose p {
     @apply leading-loose
   }
-  p a:hover, .links a:hover, .alink {
+  p a:hover, .links a:hover, .alink:hover {
     @apply underline decoration-2 underline-offset-4
   }
 
