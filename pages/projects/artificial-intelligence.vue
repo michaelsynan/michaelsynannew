@@ -47,3 +47,12 @@
   </div>
 </template>
   
+
+<script setup>
+
+useHead({
+  title: "Personal AI Chatbot",
+  meta: [{ name: 'description', content: 'I created a personal AI chatbot that uses OpenAI\'s GPT-4o model. Copy my code on GitHub.' }],
+});
+
+</script>
