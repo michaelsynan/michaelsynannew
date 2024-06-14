@@ -1,6 +1,6 @@
 <template>
     <div class="w-full flex flex-col justify-between text-white">
-        <div class="text-left md:text-center text-4xl md:text-6xl font-bold mt-20 mb-10 w-11/12 md:w-2/3 mx-auto ">
+        <div class="text-left  text-4xl md:text-6xl font-bold mt-20 mb-10 w-11/12 md:w-2/3 mx-auto ">
             COLOR PALETTE GENERATOR
         </div>
         <div class="flex justify-center">
