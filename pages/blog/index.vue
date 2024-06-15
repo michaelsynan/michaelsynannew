@@ -16,7 +16,7 @@
         v-for="article in sortedArticles(list)" 
         :key="article._path" 
         class="mb-8 md:mb-10 flex flex-row"
-      >                <img :src="article.image" class="h-28 md:h-32 mr-4 md:mr-6 rounded-sm" />
+      >                <img :src="article.image" class="h-28 md:h-32 mr-4 md:mr-6 rounded-sm thumbnail" />
                 <div>
                   <NuxtLink :to="article._path">
                     <h2
@@ -69,6 +69,10 @@ const formatDate = (isoString) => {
 .linux-prompt {
   font-family: 'Courier New', monospace;
   color: #6B7280;
+}
+
+.thumbnail { 
+  border: 1px solid rgba(166, 160, 156, 0.5) !important;
 }
 
 </style>
