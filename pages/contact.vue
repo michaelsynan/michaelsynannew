@@ -1,30 +1,31 @@
 <template>
-  <div class="flex flex-col flex-grow text-white place-content-start md:place-content-center pb-40 min-h-screen">
+  <div class="flex flex-col flex-grow text-white place-content-start md:place-content-center pb-40 min-h-screen pt-32 md:pt-0">
     <div class="mx-auto w-11/12 sm:w-2/3 md:w-2/3 lg:w-1/2">
       <section role="region" aria-label="Contact Form Section">
-        <form @submit.prevent="sendEmail" class="p-6">
-          <h2 class="text-2xl md:text-4xl font-bold pt-0 tracking-wider">Get in touch</h2>
+        <form @submit.prevent="sendEmail">
+          <h2 class="text-2xl md:text-4xl font-bold pt-0 tracking-wider pb-2">Let's Connect</h2>
+          <p class="pb-6">Send me a message and I'll get back to you ASAP.</p>
           
           <div class="mb-4">
-            <label for="name" class="block text-sm font-medium text-gray-200">Name</label>
-            <input type="text" id="name" v-model="form.name" required class="mt-1 p-2 block w-full rounded-sm bg-gray-900 bg-opacity-50 text-white border border-gray-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500" />
+            <label for="name" class="block text-sm font-medium text-stone-200">Name</label>
+            <input type="text" id="name" v-model="form.name" required class="mt-1 p-2 block w-full rounded-sm bg-stone-900 bg-opacity-50 text-white border border-stone-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500" />
           </div>
           
           <div class="mb-4">
-            <label for="email" class="block text-sm font-medium text-gray-200">Email</label>
-            <input type="email" id="email" v-model="form.email" required class="mt-1 p-2 bg-opacity-50 block w-full rounded-sm bg-gray-900 text-white border border-gray-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500" />
+            <label for="email" class="block text-sm font-medium text-stone-200">Email</label>
+            <input type="email" id="email" v-model="form.email" required class="mt-1 p-2 bg-opacity-50 block w-full rounded-sm bg-stone-900 text-white border border-stone-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500" />
           </div>
           
           <div class="mb-4">
-            <label for="message" class="block text-sm font-medium text-gray-200">Message</label>
-            <textarea id="message" v-model="form.message" rows="4" required class="mt-1 p-2 block w-full rounded-sm bg-gray-900 bg-opacity-50 text-white border border-gray-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+            <label for="message" class="block text-sm font-medium text-stone-200">Message</label>
+            <textarea id="message" v-model="form.message" rows="4" required class="mt-1 p-2 block w-full rounded-sm bg-stone-900 bg-opacity-50 text-white border border-stone-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500"></textarea>
           </div>
           
           <div class="mt-6">
             <button 
   type="submit" 
   :disabled="isSubmitted" 
-  class="!font-inter tracking-widest rounded-sm z-10 mb-4 inline-block mr-6 md:mr-8 transition ease-in-out border-2 p-2 px-3 md:p-2 md:px-4 text-sm md:text-base"
+  class="!font-inter tracking-widest rounded-sm z-10 mb-4 w-full md:w-auto inline-block mr-6 md:mr-8 transition ease-in-out border-2 p-2 px-3 md:p-2 md:px-4 text-sm md:text-base"
   :class="{'border-white hover:bg-white hover:!text-[#131721]': !isSubmitted, 'border-gray-400 bg-gray-400 cursor-not-allowed': isSubmitted}"
 >
   Submit
