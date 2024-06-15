@@ -1,14 +1,107 @@
-<script lang="ts" setup>
-useHead({
-  title: 'Contact'
-})
-</script>
-
 <template>
-  <div class="inline">
-    <div class="mb-4">Page: contact</div>
-    <Btn :to="'/'" :msg="'home'" />
+  <div class="flex flex-col flex-grow text-white place-content-start md:place-content-center pb-40 min-h-screen">
+    <div class="mx-auto w-11/12 sm:w-2/3 md:w-2/3 lg:w-1/2">
+      <section role="region" aria-label="Contact Form Section">
+        <form @submit.prevent="sendEmail" class="p-6">
+          <h2 class="text-2xl md:text-4xl font-bold pt-0 tracking-wider">Get in touch</h2>
+          
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-200">Name</label>
+            <input type="text" id="name" v-model="form.name" required class="mt-1 p-2 block w-full rounded-sm bg-gray-900 bg-opacity-50 text-white border border-gray-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500" />
+          </div>
+          
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-200">Email</label>
+            <input type="email" id="email" v-model="form.email" required class="mt-1 p-2 bg-opacity-50 block w-full rounded-sm bg-gray-900 text-white border border-gray-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500" />
+          </div>
+          
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-200">Message</label>
+            <textarea id="message" v-model="form.message" rows="4" required class="mt-1 p-2 block w-full rounded-sm bg-gray-900 bg-opacity-50 text-white border border-gray-700 focus:ring focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+          </div>
+          
+          <div class="mt-6">
+            <button 
+  type="submit" 
+  :disabled="isSubmitted" 
+  class="!font-inter tracking-widest rounded-sm z-10 mb-4 inline-block mr-6 md:mr-8 transition ease-in-out border-2 p-2 px-3 md:p-2 md:px-4 text-sm md:text-base"
+  :class="{'border-white hover:bg-white hover:!text-[#131721]': !isSubmitted, 'border-gray-400 bg-gray-400 cursor-not-allowed': isSubmitted}"
+>
+  Submit
+</button>
+
+          </div>
+          
+          <!-- Feedback Message -->
+          <div v-if="formFeedback.type === 'success'" class="mt-4 p-3 bg-green-500 text-white rounded">
+            {{ formFeedback.message }}
+          </div>
+          <div v-else-if="formFeedback.type === 'error'" class="mt-4 p-3 bg-red-500 text-white rounded">
+            {{ formFeedback.message }}
+          </div>
+        </form>
+      </section>
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const mail = useMail();
+
+const form = ref({
+  name: '',
+  email: '',
+  message: '',
+});
+
+const showFeedback = ref(false);
+const formFeedback = ref({});
+const isSubmitted = ref(false); // State to track if the form is submitted
+
+const sendEmail = async () => {
+  try {
+    await mail.send({
+      from: 'hello@michaelsynan.com',
+      subject: 'Contact Form Submission',
+      text: `Name: ${form.value.name}\nEmail: ${form.value.email}\nMessage: ${form.value.message}`,
+    });
+    formFeedback.value = {
+      type: 'success',
+      message: 'Your message has been sent successfully!',
+    };
+    isSubmitted.value = true; // Update the state to true on success
+    showFeedback.value = true;
+  } catch (error) {
+    console.error('Error sending email:', error);
+    formFeedback.value = {
+      type: 'error',
+      message: 'There was an error sending your message. Please try again.',
+    };
+    showFeedback.value = true;
+  }
+};
+
+const closeModal = () => {
+  showFeedback.value = false;
+};
+
+useHead({
+  title: "Contact",
+  meta: [{ name: 'description', content: 'Get in touch with me through this contact form.' }],
+});
+</script>
+
+<style scoped>
+input:focus-within, textarea:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 2px #14B8A6; 
+  border-color: transparent;
+}
+ input:focus, textarea:focus {
+  outline: none; 
+}
+
+</style>

@@ -21,8 +21,25 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
-    '@nuxt-alt/markdown-it'
+    '@nuxt-alt/markdown-it',
+    "nuxt-mail"
   ],
+  mail: {
+    message: {
+      to: 'mikesynan@gmail.com',
+    },
+    smtp: {
+      host: 'mail.privateemail.com',
+      port: 465,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    }
+
+
+
+  },
   markdownit: {
     runtime: true
   },
