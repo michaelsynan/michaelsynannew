@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="max-w-4xl mx-auto mb-32">
-          <nuxt-link target="_blank" to="/personal-ai-site" id="link1"
+          <nuxt-link to="/personal-ai-site" id="link1"
             class="rounded-sm mb-8 z-10 inline-block mr-6 md:mr-8 transition ease-in-out border-2 border-white p-2 px-3 md:p-2 md:px-4 text-base md:text-lg hover:bg-white hover:text-[#131721] hover:transition-all">
             Use Chatbot <i-mdi-arrow-top-right class="inline ml-1  text-xl -mr-1" />
           </nuxt-link>

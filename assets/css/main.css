@@ -167,3 +167,7 @@ body {
 
 .prose h1 {margin-bottom: 0px !important;}
 
+.prose h1 a, .prose h2 a, .prose h3 a {
+  color: #fff !important;
+}
+
