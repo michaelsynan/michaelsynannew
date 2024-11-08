@@ -51,19 +51,21 @@ watch(route, () => {
       </div>
       <div id="mobile-nav"
         :class="{ 'opacity-0 pointer-events-none': !menuOpen, 'opacity-100 pointer-events-auto': menuOpen }"
-        class="fixed inset-0 bg-gradient-to-bl from-stone-950 to-stone-900 flex flex-col items-start px-4 justify-center  space-y-8 transition-opacity duration-300 ease-in-out pt-0 text-2xl h-screen">
-        <NuxtLink to="/" activeClass="underline"
-          class="hover:underline transition-all duration-100 text-center tracking-wide">Home</NuxtLink>
-        <NuxtLink to="/personal-ai-site" activeClass="underline"
-          class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>AI</NuxtLink>
-        <NuxtLink to="/about" activeClass="underline"
-          class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>About</NuxtLink>
-        <NuxtLink to="/projects" activeClass="underline"
-          class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Projects</NuxtLink>
-        <NuxtLink to="/blog" activeClass="underline"
-          class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Blog</NuxtLink>
-        <NuxtLink to="/contact" activeClass="underline"
-          class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Contact</NuxtLink>
+        class="fixed inset-0 bg-gradient-to-bl from-stone-950 to-stone-900 flex flex-col items-start px-4 justify-center  space-y-8 transition-opacity duration-300 ease-in-out pt-0 text-2xl h-screen max-h-screen">
+        <div class="flex flex-col items-start gap-8 -mt-8 pb-8">
+          <NuxtLink to="/" activeClass="underline"
+            class="hover:underline transition-all duration-100 text-center tracking-wide">Home</NuxtLink>
+          <NuxtLink to="/personal-ai-site" activeClass="underline"
+            class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>AI</NuxtLink>
+          <NuxtLink to="/about" activeClass="underline"
+            class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>About</NuxtLink>
+          <NuxtLink to="/projects" activeClass="underline"
+            class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Projects</NuxtLink>
+          <NuxtLink to="/blog" activeClass="underline"
+            class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Blog</NuxtLink>
+          <NuxtLink to="/contact" activeClass="underline"
+            class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Contact</NuxtLink>
+        </div>
       </div>
     </div>
   </nav>
