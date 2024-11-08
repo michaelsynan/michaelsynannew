@@ -16,7 +16,9 @@ watch(route, () => {
 
 
 <template>
-  <nav class="w-full flex flex-col items-center bg-stone-900 text-white mb-4 shadow-sm bg-opacity-50 !z-100 fixed zfix p-2 md:p-0 backdrop-blur" aria-label="Main navigation">
+  <nav
+    class="w-full flex flex-col items-center bg-stone-900 text-white mb-4 shadow-sm bg-opacity-50 !z-100 fixed zfix p-2 md:p-0 backdrop-blur"
+    aria-label="Main navigation">
     <div class="w-full px-2 md:px-6 flex flex-col md:flex-row justify-between text-lg">
       <div class="flex justify-between items-center w-full md:mb-0">
         <NuxtLink :to="'/'" class="font-medium zfix text-xl tracking-wider">MICHAEL SYNAN</NuxtLink>
@@ -31,7 +33,7 @@ watch(route, () => {
         <NuxtLink to="/" activeClass="!bg-zinc-700"
           class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">
           Home</NuxtLink>
-          <NuxtLink to="/personal-ai-site" activeClass="!bg-zinc-700"
+        <NuxtLink to="/personal-ai-site" activeClass="!bg-zinc-700"
           class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">
           AI</NuxtLink>
         <NuxtLink to="/about" prefetch activeClass="!bg-zinc-700"
@@ -43,14 +45,16 @@ watch(route, () => {
         <NuxtLink to="/blog" prefetch activeClass="!bg-zinc-700"
           class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800">
           Blog</NuxtLink>
-          <NuxtLink to="/contact" activeClass="underline"
-          class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800" prefetch>Contact</NuxtLink>
+        <NuxtLink to="/contact" activeClass="underline"
+          class="!font-inter px-4 py-2 text-base font-medium tracking-widest text-gray-300 hover:text-gray-100 transition-colors hover:bg-zinc-800"
+          prefetch>Contact</NuxtLink>
       </div>
-      <div :class="{ 'opacity-0 pointer-events-none': !menuOpen, 'opacity-100 pointer-events-auto': menuOpen }"
-        class="fixed inset-0 bg-stone-900 flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 ease-in-out pt-20 md:pt-10 text-2xl h-screen">
+      <div id="mobile-nav"
+        :class="{ 'opacity-0 pointer-events-none': !menuOpen, 'opacity-100 pointer-events-auto': menuOpen }"
+        class="fixed inset-0 bg-stone-900 flex flex-col items-start px-4 justify-center  space-y-8 transition-opacity duration-300 ease-in-out pt-0 text-2xl h-screen">
         <NuxtLink to="/" activeClass="underline"
           class="hover:underline transition-all duration-100 text-center tracking-wide">Home</NuxtLink>
-          <NuxtLink to="/personal-ai-site" activeClass="underline"
+        <NuxtLink to="/personal-ai-site" activeClass="underline"
           class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>AI</NuxtLink>
         <NuxtLink to="/about" activeClass="underline"
           class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>About</NuxtLink>
@@ -58,7 +62,7 @@ watch(route, () => {
           class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Projects</NuxtLink>
         <NuxtLink to="/blog" activeClass="underline"
           class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Blog</NuxtLink>
-          <NuxtLink to="/contact" activeClass="underline"
+        <NuxtLink to="/contact" activeClass="underline"
           class="hover:underline transition-all duration-100 text-center tracking-wide" prefetch>Contact</NuxtLink>
       </div>
     </div>
