@@ -8,13 +8,17 @@ export default defineNuxtConfig({
   target: 'static',
   ssr: false,
   devtools: { enabled: false },
+
   runtimeConfig: {
     openaiApiKey: process.env.OPENAI_API_KEY
   },
+
   app: { 
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+
   css: ['~/assets/css/main.css'],
+
   modules: [
     '@nuxtjs/tailwindcss',
     ["unplugin-icons/nuxt", { autoInstall: true }],
@@ -24,6 +28,7 @@ export default defineNuxtConfig({
     '@nuxt-alt/markdown-it',
     "nuxt-mail"
   ],
+
   mail: {
     message: {
       to: 'mikesynan@gmail.com',
@@ -40,9 +45,11 @@ export default defineNuxtConfig({
 
 
   },
+
   markdownit: {
     runtime: true
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -50,15 +57,18 @@ export default defineNuxtConfig({
     },
 
   },
+
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
     config: {
       plugins: [tailwindTypography],
     }
   },
+
   content: {
     documentDriven: true
   },
+
   vite: {
     plugins: [
       Components({
@@ -68,4 +78,6 @@ export default defineNuxtConfig({
     ],
     optimizeDeps: { exclude: ["fsevents"] },
   },
+
+  compatibilityDate: '2025-05-25',
 })
